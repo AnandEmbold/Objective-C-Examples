@@ -22,7 +22,7 @@
 		075376AA189C2D8500BE3A1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 075376A8189C2D8500BE3A1C /* InfoPlist.strings */; };
 		075376AC189C2D8500BE3A1C /* AppNavigationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075376AB189C2D8500BE3A1C /* AppNavigationTests.m */; };
 		075376B7189C2E0600BE3A1C /* 1032xiphone-640x1197.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 075376B5189C2E0600BE3A1C /* 1032xiphone-640x1197.jpg */; };
-		075376B8189C2E0600BE3A1C /* fondos-pantalla-ios-7-16-347x650.png in Resources */ = {isa = PBXBuildFile; fileRef = 075376B6189C2E0600BE3A1C /* fondos-pantalla-ios-7-16-347x650.png */; };
+		075376B8189C2E0600BE3A1C /* background-ios-7-16-347x650.png in Resources */ = {isa = PBXBuildFile; fileRef = 075376B6189C2E0600BE3A1C /* background-ios-7-16-347x650.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		075376A9189C2D8500BE3A1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		075376AB189C2D8500BE3A1C /* AppNavigationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppNavigationTests.m; sourceTree = "<group>"; };
 		075376B5189C2E0600BE3A1C /* 1032xiphone-640x1197.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1032xiphone-640x1197.jpg"; sourceTree = "<group>"; };
-		075376B6189C2E0600BE3A1C /* fondos-pantalla-ios-7-16-347x650.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fondos-pantalla-ios-7-16-347x650.png"; sourceTree = "<group>"; };
+		075376B6189C2E0600BE3A1C /* background-ios-7-16-347x650.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-ios-7-16-347x650.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				075376B5189C2E0600BE3A1C /* 1032xiphone-640x1197.jpg */,
-				075376B6189C2E0600BE3A1C /* fondos-pantalla-ios-7-16-347x650.png */,
+				075376B6189C2E0600BE3A1C /* background-ios-7-16-347x650.png */,
 				07537686189C2D8500BE3A1C /* AppNavigation */,
 				075376A5189C2D8500BE3A1C /* AppNavigationTests */,
 				0753767F189C2D8500BE3A1C /* Frameworks */,
@@ -239,7 +239,7 @@
 				075376B7189C2E0600BE3A1C /* 1032xiphone-640x1197.jpg in Resources */,
 				0753768B189C2D8500BE3A1C /* InfoPlist.strings in Resources */,
 				07537694189C2D8500BE3A1C /* Main.storyboard in Resources */,
-				075376B8189C2E0600BE3A1C /* fondos-pantalla-ios-7-16-347x650.png in Resources */,
+				075376B8189C2E0600BE3A1C /* background-ios-7-16-347x650.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +469,7 @@
 				075376B1189C2D8500BE3A1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		075376B2189C2D8500BE3A1C /* Build configuration list for PBXNativeTarget "AppNavigationTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +478,7 @@
 				075376B4189C2D8500BE3A1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EB9D6BDD39E94B34A2B2F043"
+               BlueprintIdentifier = "82252E7CBE8F467FB256B2F4"
                BuildableName = "libPods-Mantle.a"
                BlueprintName = "Pods-Mantle"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EB9D6BDD39E94B34A2B2F043"
+            BlueprintIdentifier = "82252E7CBE8F467FB256B2F4"
             BuildableName = "libPods-Mantle.a"
             BlueprintName = "Pods-Mantle"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,7 +60,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EB9D6BDD39E94B34A2B2F043"
+            BlueprintIdentifier = "82252E7CBE8F467FB256B2F4"
             BuildableName = "libPods-Mantle.a"
             BlueprintName = "Pods-Mantle"
             ReferencedContainer = "container:Pods.xcodeproj">

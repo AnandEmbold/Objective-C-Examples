@@ -32,7 +32,7 @@
     if (self.numero==nil) {
         self.title = @"Pantalla Principal";
     }else{
-        self.title = [NSString stringWithFormat:@"Pantalla %d", [self.numero integerValue]];
+        self.title = [NSString stringWithFormat:@"Pantalla %ld", (long)[self.numero integerValue]];
     }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -66,7 +66,7 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%d", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
     
     return cell;
 }
@@ -125,7 +125,7 @@
     
     UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
     CBTableViewController * controlador = [storyboard instantiateViewControllerWithIdentifier:@"tabla"];
-    controlador.numero = [NSNumber numberWithInt:indexPath.row];
+    controlador.numero = [NSNumber numberWithLong:indexPath.row];
     [self.navigationController pushViewController:controlador animated:YES];
     
 }

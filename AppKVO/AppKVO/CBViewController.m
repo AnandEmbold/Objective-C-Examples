@@ -9,11 +9,11 @@
 #import "CBViewController.h"
 
 @interface CBViewController () <UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *lblTexto;
-@property (weak, nonatomic) IBOutlet UITextField *txtTexto;
-@property (strong, nonatomic) NSString * texto;
+@property (weak, nonatomic) IBOutlet UILabel *lblText;
+@property (weak, nonatomic) IBOutlet UITextField *txtText;
+@property (strong, nonatomic) NSString * text;
 
-- (IBAction)actualizarTexto:(id)sender;
+- (IBAction)updateText:(id)sender;
 
 @end
 
@@ -23,9 +23,9 @@
 {
     [super viewDidLoad];
     
-    [self addObserver:self forKeyPath:@"texto" options:NSKeyValueObservingOptionNew context:nil];
+    [self addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
     
-    self.txtTexto.delegate = self;
+    self.txtText.delegate = self;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -39,7 +39,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
 
-    self.lblTexto.text = [change valueForKey:@"new"];
+    self.lblText.text = [change valueForKey:@"new"];
     
 }
 
@@ -49,9 +49,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)actualizarTexto:(id)sender {
+- (IBAction)updateText:(id)sender {
     
-    self.texto = self.txtTexto.text;
+    self.text = self.txtText.text;
     
 }
 @end

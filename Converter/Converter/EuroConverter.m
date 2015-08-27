@@ -11,6 +11,7 @@
 
 @implementation EuroConverter
 
+//value to convert european euro to spanish peseta
 #define ConvertNumber 166.386
 
 

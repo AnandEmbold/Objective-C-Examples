@@ -35,8 +35,13 @@
 
     NSLog(@"%f euros are %ld pesetas", self.money, converter.convertToPeseta);
     
-    SEL sel = NSSelectorFromString(@"convertToPeseta");
-    [converter performSelector:sel];
+    //with selector
+    //SEL sel = NSSelectorFromString(@"convertToPeseta");
+    //[converter performSelector:sel];
+    
+    //without selector
+    [converter convertToPeseta];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

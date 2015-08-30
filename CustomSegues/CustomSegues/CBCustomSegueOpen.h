@@ -1,5 +1,5 @@
 //
-//  CBCustomSegueCerrar.h
+//  CBCustomSegueAbrir.h
 //  CustomSegues
 //
 //  Created by Carlos on 04/05/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CBCustomSegueCerrar : UIStoryboardSegue
+@interface CBCustomSegueOpen : UIStoryboardSegue
 
 @end

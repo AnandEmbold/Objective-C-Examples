@@ -21,9 +21,9 @@
 		077963B11916A4380003AFB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077963931916A4380003AFB2 /* UIKit.framework */; };
 		077963B91916A4380003AFB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 077963B71916A4380003AFB2 /* InfoPlist.strings */; };
 		077963BB1916A4380003AFB2 /* CustomSeguesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 077963BA1916A4380003AFB2 /* CustomSeguesTests.m */; };
-		077963C51916A4900003AFB2 /* fondo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077963C41916A4900003AFB2 /* fondo2.jpg */; };
-		077963C81916A4DB0003AFB2 /* CBCustomSegueAbrir.m in Sources */ = {isa = PBXBuildFile; fileRef = 077963C71916A4DB0003AFB2 /* CBCustomSegueAbrir.m */; };
-		077963CB1916A4EE0003AFB2 /* CBCustomSegueCerrar.m in Sources */ = {isa = PBXBuildFile; fileRef = 077963CA1916A4EE0003AFB2 /* CBCustomSegueCerrar.m */; };
+		077963C51916A4900003AFB2 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077963C41916A4900003AFB2 /* background.jpg */; };
+		077963C81916A4DB0003AFB2 /* CBCustomSegueOpen.m in Sources */ = {isa = PBXBuildFile; fileRef = 077963C71916A4DB0003AFB2 /* CBCustomSegueOpen.m */; };
+		077963CB1916A4EE0003AFB2 /* CBCustomSegueClose.m in Sources */ = {isa = PBXBuildFile; fileRef = 077963CA1916A4EE0003AFB2 /* CBCustomSegueClose.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +56,11 @@
 		077963B61916A4380003AFB2 /* CustomSeguesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomSeguesTests-Info.plist"; sourceTree = "<group>"; };
 		077963B81916A4380003AFB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		077963BA1916A4380003AFB2 /* CustomSeguesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSeguesTests.m; sourceTree = "<group>"; };
-		077963C41916A4900003AFB2 /* fondo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo2.jpg; sourceTree = "<group>"; };
-		077963C61916A4DB0003AFB2 /* CBCustomSegueAbrir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBCustomSegueAbrir.h; path = CustomSegues/CBCustomSegueAbrir.h; sourceTree = "<group>"; };
-		077963C71916A4DB0003AFB2 /* CBCustomSegueAbrir.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBCustomSegueAbrir.m; path = CustomSegues/CBCustomSegueAbrir.m; sourceTree = "<group>"; };
-		077963C91916A4EE0003AFB2 /* CBCustomSegueCerrar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBCustomSegueCerrar.h; path = CustomSegues/CBCustomSegueCerrar.h; sourceTree = "<group>"; };
-		077963CA1916A4EE0003AFB2 /* CBCustomSegueCerrar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBCustomSegueCerrar.m; path = CustomSegues/CBCustomSegueCerrar.m; sourceTree = "<group>"; };
+		077963C41916A4900003AFB2 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		077963C61916A4DB0003AFB2 /* CBCustomSegueOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBCustomSegueOpen.h; path = CustomSegues/CBCustomSegueOpen.h; sourceTree = "<group>"; };
+		077963C71916A4DB0003AFB2 /* CBCustomSegueOpen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBCustomSegueOpen.m; path = CustomSegues/CBCustomSegueOpen.m; sourceTree = "<group>"; };
+		077963C91916A4EE0003AFB2 /* CBCustomSegueClose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBCustomSegueClose.h; path = CustomSegues/CBCustomSegueClose.h; sourceTree = "<group>"; };
+		077963CA1916A4EE0003AFB2 /* CBCustomSegueClose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBCustomSegueClose.m; path = CustomSegues/CBCustomSegueClose.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,7 @@
 		077963951916A4380003AFB2 /* CustomSegues */ = {
 			isa = PBXGroup;
 			children = (
-				077963C41916A4900003AFB2 /* fondo2.jpg */,
+				077963C41916A4900003AFB2 /* background.jpg */,
 				0779639E1916A4380003AFB2 /* CBAppDelegate.h */,
 				0779639F1916A4380003AFB2 /* CBAppDelegate.m */,
 				077963A11916A4380003AFB2 /* Main.storyboard */,
@@ -165,10 +165,10 @@
 		077963CC1916A4F80003AFB2 /* Segues */ = {
 			isa = PBXGroup;
 			children = (
-				077963C61916A4DB0003AFB2 /* CBCustomSegueAbrir.h */,
-				077963C71916A4DB0003AFB2 /* CBCustomSegueAbrir.m */,
-				077963C91916A4EE0003AFB2 /* CBCustomSegueCerrar.h */,
-				077963CA1916A4EE0003AFB2 /* CBCustomSegueCerrar.m */,
+				077963C61916A4DB0003AFB2 /* CBCustomSegueOpen.h */,
+				077963C71916A4DB0003AFB2 /* CBCustomSegueOpen.m */,
+				077963C91916A4EE0003AFB2 /* CBCustomSegueClose.h */,
+				077963CA1916A4EE0003AFB2 /* CBCustomSegueClose.m */,
 			);
 			name = Segues;
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				077963A81916A4380003AFB2 /* Images.xcassets in Resources */,
-				077963C51916A4900003AFB2 /* fondo2.jpg in Resources */,
+				077963C51916A4900003AFB2 /* background.jpg in Resources */,
 				0779639A1916A4380003AFB2 /* InfoPlist.strings in Resources */,
 				077963A31916A4380003AFB2 /* Main.storyboard in Resources */,
 			);
@@ -272,10 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				077963C81916A4DB0003AFB2 /* CBCustomSegueAbrir.m in Sources */,
+				077963C81916A4DB0003AFB2 /* CBCustomSegueOpen.m in Sources */,
 				0779639C1916A4380003AFB2 /* main.m in Sources */,
 				077963A01916A4380003AFB2 /* CBAppDelegate.m in Sources */,
-				077963CB1916A4EE0003AFB2 /* CBCustomSegueCerrar.m in Sources */,
+				077963CB1916A4EE0003AFB2 /* CBCustomSegueClose.m in Sources */,
 				077963A61916A4380003AFB2 /* CBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +481,7 @@
 				077963C01916A4380003AFB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		077963C11916A4380003AFB2 /* Build configuration list for PBXNativeTarget "CustomSeguesTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +490,7 @@
 				077963C31916A4380003AFB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

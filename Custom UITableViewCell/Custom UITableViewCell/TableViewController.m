@@ -59,7 +59,7 @@
         case 1:
             cell.imgLogo.image = [UIImage imageNamed:@"cake2.jpg"];
             cell.lblTitle.text = @"Birthday Cake";
-            cell.lblInfo.text = @"With chocolat and cookies";
+            cell.lblInfo.text = @"With chocolate and cookies";
             break;
         case 2:
             cell.imgLogo.image = [UIImage imageNamed:@"cake3.jpg"];

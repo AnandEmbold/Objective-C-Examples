@@ -7,9 +7,9 @@
 //
 
 #import "CBTableViewController.h"
-#import "CBCellConDelegado.h"
+#import "CBCellWithDelegate.h"
 
-@interface CBTableViewController () <Mensajes>
+@interface CBTableViewController () <Messages>
 
 @end
 
@@ -58,35 +58,35 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    CBCellConDelegado *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    CBCellWithDelegate *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     switch (indexPath.row) {
         case 0:
-            cell.lblNombre.text = @"iPhone";
+            cell.lblName.text = @"iPhone";
             break;
         case 1:
-            cell.lblNombre.text = @"iPod";
+            cell.lblName.text = @"iPod";
             break;
         case 2:
-            cell.lblNombre.text = @"iPad";
+            cell.lblName.text = @"iPad";
             break;
         case 3:
-            cell.lblNombre.text = @"Mac";
+            cell.lblName.text = @"Mac";
             break;
             
         default:
             break;
     }
     
-    cell.delegado = self;
+    cell.delegate = self;
     
     // Configure the cell...
     
     return cell;
 }
 
--(void)mostrarMensaje:(NSString *)msg{
-    UIAlertView * alerta = [[UIAlertView alloc] initWithTitle:@"Soy..." message:msg delegate:self cancelButtonTitle:@"cerrar" otherButtonTitles:nil];
+-(void)showMessage:(NSString *)msg{
+    UIAlertView * alerta = [[UIAlertView alloc] initWithTitle:@"I am..." message:msg delegate:self cancelButtonTitle:@"close" otherButtonTitles:nil];
     [alerta show];
 }
 

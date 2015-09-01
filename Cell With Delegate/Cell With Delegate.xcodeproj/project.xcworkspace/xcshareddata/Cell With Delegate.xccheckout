@@ -14,7 +14,7 @@
 		<string>https://github.com/CarlosButron/Objective-C.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Celda con delegado/Cell With Delegate.xcodeproj</string>
+	<string>Cell With Delegate/Cell With Delegate.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2AE71180FEE1D18FDB0AB08F33008D9704F946C2</key>

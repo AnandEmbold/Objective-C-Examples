@@ -1,6 +1,6 @@
 //
-//  CBCellConDelegado.h
-//  Celda con delegado
+//  CBCellWithDelegate.h
+//  Cell With Delegate
 //
 //  Created by Carlos on 13/02/14.
 //  Copyright (c) 2014 Carlos Butron. All rights reserved.

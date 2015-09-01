@@ -85,8 +85,8 @@
 		07F2C2A718ACD29E00151C30 = {
 			isa = PBXGroup;
 			children = (
-				07F2C2B918ACD29E00151C30 /* Celda con delegado */,
-				07F2C2D818ACD29E00151C30 /* Celda con delegadoTests */,
+				07F2C2B918ACD29E00151C30 /* Cell with delegate */,
+				07F2C2D818ACD29E00151C30 /* Cell with delegateTests */,
 				07F2C2B218ACD29E00151C30 /* Frameworks */,
 				07F2C2B118ACD29E00151C30 /* Products */,
 			);
@@ -112,7 +112,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		07F2C2B918ACD29E00151C30 /* Celda con delegado */ = {
+		07F2C2B918ACD29E00151C30 /* Cell with delegate */ = {
 			isa = PBXGroup;
 			children = (
 				07F2C2C218ACD29E00151C30 /* CBAppDelegate.h */,
@@ -125,6 +125,7 @@
 				07F2C2EB18ACD31400151C30 /* CBCellWithDelegate.h */,
 				07F2C2EC18ACD31400151C30 /* CBCellWithDelegate.m */,
 			);
+			name = "Cell with delegate";
 			path = "Celda con delegado";
 			sourceTree = "<group>";
 		};
@@ -139,12 +140,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		07F2C2D818ACD29E00151C30 /* Celda con delegadoTests */ = {
+		07F2C2D818ACD29E00151C30 /* Cell with delegateTests */ = {
 			isa = PBXGroup;
 			children = (
 				07F2C2DE18ACD29E00151C30 /* Celda_con_delegadoTests.m */,
 				07F2C2D918ACD29E00151C30 /* Supporting Files */,
 			);
+			name = "Cell with delegateTests";
 			path = "Celda con delegadoTests";
 			sourceTree = "<group>";
 		};

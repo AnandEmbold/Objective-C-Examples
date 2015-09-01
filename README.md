@@ -14,13 +14,18 @@ Features
 The project features code-level examples for the following items:
 
 + Animation UIKit
++ Autolayout
 + KVO
 + MultiView
 + Navigation
 + Notification
 + TabBar Navigation
 + ToolBar
++ TableView with standard or custom cell
++ UICollectionView inside UITableView
++ Drawing functions
 + CoreData
++ CoreLocation
 + Libraries
 + Cells with delegate
 + CoreAnimation
@@ -32,7 +37,12 @@ The project features code-level examples for the following items:
 + MVC model
 + iPad Split
 + iPad Tab
-+ Static Table
++ Textfields and views
++ Camera Control
++ Pickers
++ Action Sheet
++ Weather starter app
++ Ping Pong game app
 
 
 I plan to write further additional examples and all developers are welcome to follow the project through Github. As a collaborative open-source effort, I also welcome feedback and contribution from others.

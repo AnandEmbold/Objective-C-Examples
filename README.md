@@ -1,4 +1,4 @@
-Reusable Swift code 
+Reusable Objective-C code 
 ====================
 
 This project provides some examples in Objective-C for iOS. 
@@ -14,14 +14,13 @@ Features
 The project features code-level examples for the following items:
 
 + Animation UIKit
-+ App KVO
-+ App MultiView
-+ App Navigation
-+ App Notification
-+ App TabBar
-+ App TabBarNav
-+ App ToolBar
-+ App CoreData
++ KVO
++ MultiView
++ Navigation
++ Notification
++ TabBar Navigation
++ ToolBar
++ CoreData
 + Libraries
 + Cells with delegate
 + CoreAnimation

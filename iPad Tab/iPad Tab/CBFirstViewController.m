@@ -9,7 +9,7 @@
 #import "CBFirstViewController.h"
 
 @interface CBFirstViewController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *sclContenido;
+@property (weak, nonatomic) IBOutlet UIScrollView *sclContents;
 
 @end
 
@@ -18,8 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.sclContenido.scrollEnabled = YES;
-    self.sclContenido.contentSize = CGSizeMake(768, 1400);
+    self.sclContents.scrollEnabled = YES;
+    self.sclContents.contentSize = CGSizeMake(768, 1400);
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

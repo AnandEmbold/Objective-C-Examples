@@ -103,8 +103,8 @@
     [mutableDict removeObjectForKey:@"ID"];
     [mutableDict removeAllObjects];
     
-    NSArray *values = [dict allValues];
-    NSArray *keys = [dict allKeys];
+    //NSArray *values = [dict allValues];
+    //NSArray *keys = [dict allKeys];
     
     
     //nsdictionary with plist
@@ -137,17 +137,20 @@
     
     int number = 1;
     
-  //  [muString appendString:(@" %d", number)];
+    [muString appendString:([NSString stringWithFormat:@"%d", number])];
     
     NSMutableArray *mutArray = [NSMutableArray array];
     [mutArray addObject:@"Hello"];
     [mutArray addObject:[NSDate date]];
     [mutArray addObject:@1];
     
-    NSNumber *number1 = @1;
     
-    NSInteger *numberNormal = [number1 integerValue];
-    float numberFloat = [number1 floatValue];
+    //casting samples
+    //NSNumber *number1 = @1;
+    
+    
+    //NSInteger *numberRegular = [number1 integerValue];
+    //float numberFloat = [number1 floatValue];
     
     
     
@@ -168,7 +171,7 @@
     NSArray *arrayOfObjects = [set allObjects];
     
     NSLog(@"%@", anyObject);
-    
+    NSLog(@"%@", arrayOfObjects);
     
     
     

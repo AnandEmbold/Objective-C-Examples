@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0751FAB31B968D2F008C7B4F /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0751FAB11B968D2F008C7B4F /* background1.jpg */; };
+		0751FAB41B968D2F008C7B4F /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0751FAB21B968D2F008C7B4F /* background2.png */; };
 		07CC34C818F2830B0078BC94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CC34C718F2830B0078BC94 /* Foundation.framework */; };
 		07CC34CA18F2830B0078BC94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CC34C918F2830B0078BC94 /* CoreGraphics.framework */; };
 		07CC34CC18F2830B0078BC94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CC34CB18F2830B0078BC94 /* UIKit.framework */; };
@@ -22,8 +24,6 @@
 		07CC34F118F2830B0078BC94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07CC34EF18F2830B0078BC94 /* InfoPlist.strings */; };
 		07CC34F318F2830B0078BC94 /* Core_AnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CC34F218F2830B0078BC94 /* Core_AnimationTests.m */; };
 		07CC34FD18F283330078BC94 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CC34FC18F283330078BC94 /* QuartzCore.framework */; };
-		07CC350018F285CA0078BC94 /* fondo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07CC34FE18F285CA0078BC94 /* fondo1.jpg */; };
-		07CC350118F285CA0078BC94 /* fondo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CC34FF18F285CA0078BC94 /* fondo2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0751FAB11B968D2F008C7B4F /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
+		0751FAB21B968D2F008C7B4F /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
 		07CC34C418F2830B0078BC94 /* Core Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core Animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CC34C718F2830B0078BC94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07CC34C918F2830B0078BC94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,8 +59,6 @@
 		07CC34F018F2830B0078BC94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07CC34F218F2830B0078BC94 /* Core_AnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Core_AnimationTests.m; sourceTree = "<group>"; };
 		07CC34FC18F283330078BC94 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		07CC34FE18F285CA0078BC94 /* fondo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo1.jpg; path = ../fondo1.jpg; sourceTree = "<group>"; };
-		07CC34FF18F285CA0078BC94 /* fondo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fondo2.png; path = ../fondo2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,8 @@
 		07CC34BB18F2830B0078BC94 = {
 			isa = PBXGroup;
 			children = (
-				07CC34FE18F285CA0078BC94 /* fondo1.jpg */,
-				07CC34FF18F285CA0078BC94 /* fondo2.png */,
+				0751FAB11B968D2F008C7B4F /* background1.jpg */,
+				0751FAB21B968D2F008C7B4F /* background2.png */,
 				07CC34CD18F2830B0078BC94 /* Core Animation */,
 				07CC34EC18F2830B0078BC94 /* Core AnimationTests */,
 				07CC34C618F2830B0078BC94 /* Frameworks */,
@@ -239,11 +239,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0751FAB31B968D2F008C7B4F /* background1.jpg in Resources */,
 				07CC34E018F2830B0078BC94 /* Images.xcassets in Resources */,
-				07CC350018F285CA0078BC94 /* fondo1.jpg in Resources */,
 				07CC34D218F2830B0078BC94 /* InfoPlist.strings in Resources */,
 				07CC34DB18F2830B0078BC94 /* Main.storyboard in Resources */,
-				07CC350118F285CA0078BC94 /* fondo2.png in Resources */,
+				0751FAB41B968D2F008C7B4F /* background2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +469,7 @@
 				07CC34F818F2830B0078BC94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07CC34F918F2830B0078BC94 /* Build configuration list for PBXNativeTarget "Core AnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +478,7 @@
 				07CC34FB18F2830B0078BC94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

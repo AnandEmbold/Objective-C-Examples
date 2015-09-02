@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,12 +19,11 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDf-yH-vBk">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4jC-D7-EVs"/>
-                                    <barButtonItem title="Animar" id="Tz2-4D-LiZ">
+                                    <barButtonItem title="Animation" id="Tz2-4D-LiZ">
                                         <connections>
-                                            <action selector="animar:" destination="vXZ-lx-hvc" id="vO0-gF-CbY"/>
+                                            <action selector="animate:" destination="vXZ-lx-hvc" id="7Jn-TD-Py4"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="N77-ht-fgc"/>
@@ -31,29 +31,27 @@
                             </toolbar>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QT6-BR-Y6V">
                                 <rect key="frame" x="270" y="536" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u1q-Im-TyD">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="contenedor" destination="u1q-Im-TyD" id="cmF-F8-w6A"/>
-                        <outlet property="proceso" destination="QT6-BR-Y6V" id="r4K-0K-gsE"/>
-                        <outlet property="vista1" destination="j5g-IO-jLQ" id="R4Q-UH-ly8"/>
-                        <outlet property="vista2" destination="Oh4-QM-2EE" id="BGk-iu-giQ"/>
+                        <outlet property="container" destination="u1q-Im-TyD" id="xdc-lj-8NC"/>
+                        <outlet property="imgView1" destination="j5g-IO-jLQ" id="38r-7r-Jxt"/>
+                        <outlet property="imgView2" destination="Oh4-QM-2EE" id="nGx-Rz-oRm"/>
+                        <outlet property="load" destination="QT6-BR-Y6V" id="a0e-DJ-i4h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo1.jpg" id="j5g-IO-jLQ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1.jpg" id="j5g-IO-jLQ">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo2.png" id="Oh4-QM-2EE">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2.png" id="Oh4-QM-2EE">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -61,8 +59,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fondo1.jpg" width="640" height="1197"/>
-        <image name="fondo2.png" width="347" height="650"/>
+        <image name="background1.jpg" width="640" height="1136"/>
+        <image name="background2.png" width="347" height="650"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

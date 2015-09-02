@@ -16,8 +16,8 @@
 		077BD3861AFA2A1F00A46BFB /* Storyboard101Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 077BD3851AFA2A1F00A46BFB /* Storyboard101Tests.m */; };
 		077BD3921AFA54A400A46BFB /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077BD3901AFA54A400A46BFB /* NewViewController.m */; };
 		077BD3931AFA54A400A46BFB /* NewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 077BD3911AFA54A400A46BFB /* NewViewController.xib */; };
-		077BD3961AFA69AB00A46BFB /* starwars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077BD3951AFA69AB00A46BFB /* starwars.jpg */; };
 		077BD3991AFA83A300A46BFB /* Painting.m in Sources */ = {isa = PBXBuildFile; fileRef = 077BD3981AFA83A300A46BFB /* Painting.m */; };
+		07A867AA1B972A720005E6FE /* starwars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07A867A91B972A720005E6FE /* starwars.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +47,9 @@
 		077BD38F1AFA54A400A46BFB /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
 		077BD3901AFA54A400A46BFB /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
 		077BD3911AFA54A400A46BFB /* NewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewViewController.xib; sourceTree = "<group>"; };
-		077BD3951AFA69AB00A46BFB /* starwars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starwars.jpg; sourceTree = "<group>"; };
 		077BD3971AFA83A300A46BFB /* Painting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Painting.h; sourceTree = "<group>"; };
 		077BD3981AFA83A300A46BFB /* Painting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Painting.m; sourceTree = "<group>"; };
+		07A867A91B972A720005E6FE /* starwars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starwars.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +138,7 @@
 		077BD3941AFA687700A46BFB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				077BD3951AFA69AB00A46BFB /* starwars.jpg */,
+				07A867A91B972A720005E6FE /* starwars.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -225,7 +225,7 @@
 			files = (
 				077BD3751AFA2A1F00A46BFB /* Main.storyboard in Resources */,
 				077BD37A1AFA2A1F00A46BFB /* LaunchScreen.xib in Resources */,
-				077BD3961AFA69AB00A46BFB /* starwars.jpg in Resources */,
+				07A867AA1B972A720005E6FE /* starwars.jpg in Resources */,
 				077BD3771AFA2A1F00A46BFB /* Images.xcassets in Resources */,
 				077BD3931AFA54A400A46BFB /* NewViewController.xib in Resources */,
 			);
@@ -444,6 +444,7 @@
 				077BD38B1AFA2A1F00A46BFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		077BD38C1AFA2A1F00A46BFB /* Build configuration list for PBXNativeTarget "Storyboard101Tests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +453,7 @@
 				077BD38E1AFA2A1F00A46BFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

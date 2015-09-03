@@ -42,8 +42,8 @@ The project features code-level examples for the following items:
 + Pickers
 + Action Sheet
 + Weather starter app
-+ Ping Pong game app
-
++ Arkanoid Clon Cocos2D test
+(Arkanoid old game, iPhone4S iOS7 optimized, works in all iPhone model)
 
 I plan to write further additional examples and all developers are welcome to follow the project through Github. As a collaborative open-source effort, I also welcome feedback and contribution from others.
 

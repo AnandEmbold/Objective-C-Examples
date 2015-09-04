@@ -24,7 +24,7 @@
 
 -(IBAction)delete:(id)sender
 {
-    //Reiniciar la vista borrando todas las líneas.
+    //reload view deleting all lines
     [self.lines removeAllObjects];
     
     [self setNeedsDisplay];
@@ -48,7 +48,7 @@
 - (void)drawRect:(CGRect)rect
 {
     
-    //Pintar todas las líneas de NSMutableArray lineas de color rojo y con un grosor de línea de 3.
+    //draw all lines in NSMutableArray. red color. size 3
     
     
     CGContextRef contexto = UIGraphicsGetCurrentContext();
@@ -64,7 +64,7 @@
     
     for (int i=0; i<_lines.count; i++) {
         Line * line = [self.lineas objectAtIndex:i];
-        //NSLog(@"drawrect  %f, %f, %f, %f", linea.puntos.origin.x, linea.puntos.origin.y, linea.puntos.size.width, linea.puntos.size.height);
+        //NSLog(@"drawrect  %f, %f, %f, %f", line.points.origin.x, line.points.origin.y, line.points.size.width, line.points.size.height);
         
         CGContextMoveToPoint(contexto, line.points.origin.x, line.points.origin.y);
         CGContextAddLineToPoint(contexto, line.points.size.width, line.points.size.height);
@@ -85,7 +85,7 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
-    //Actualizar los atributos inicio y fin.
+    //update start and end
     UITouch *touch = [touches anyObject];
     start = [touch previousLocationInView:self];
     end = [touch locationInView:self];
@@ -96,16 +96,16 @@
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     
-    //Añadir las coordenadas del movimiento al NSMutableArray lineas haciendo uso de la clase GTLinea.
-    //Actualizar los atributos inicio y fin.
-    //Recargar la vista.
+    //add coordinates of movement to NSMutableArray lines with class Line
+    //update start and end
+    //reload view
     
     UITouch * touch = [touches anyObject];
     start = [touch previousLocationInView:self];
     end = [touch locationInView:self];
     Line * line = [[Line alloc] initWithRect:CGRectMake(start.x, start.y, end.x, end.y)];
     
-    // NSLog(@"touchesmoved   %f, %f, %f, %f", inicio.x, inicio.y, fin.x, fin.y);
+    // NSLog(@"touchesmoved   %f, %f, %f, %f", start.x, start.y, end.x, end.y);
     
     [self.lineas addObject: line];
     start.x = end.x;

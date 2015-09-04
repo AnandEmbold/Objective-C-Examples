@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072F553F1B9920740026DB37 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 072F553E1B9920740026DB37 /* Line.m */; };
 		0751FAC41B969417008C7B4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0751FAC31B969417008C7B4F /* main.m */; };
 		0751FAC71B969417008C7B4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0751FAC61B969417008C7B4F /* AppDelegate.m */; };
 		0751FACA1B969417008C7B4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0751FAC91B969417008C7B4F /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072F553D1B9920740026DB37 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		072F553E1B9920740026DB37 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 		0751FABE1B969417008C7B4F /* Board with Touch Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Board with Touch Events.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0751FAC21B969417008C7B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0751FAC31B969417008C7B4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				0751FAC61B969417008C7B4F /* AppDelegate.m */,
 				0751FAC81B969417008C7B4F /* ViewController.h */,
 				0751FAC91B969417008C7B4F /* ViewController.m */,
+				072F553D1B9920740026DB37 /* Line.h */,
+				072F553E1B9920740026DB37 /* Line.m */,
 				0751FAE71B96942B008C7B4F /* Board.h */,
 				0751FAE81B96942B008C7B4F /* Board.m */,
 				0751FACB1B969417008C7B4F /* Main.storyboard */,
@@ -228,6 +233,7 @@
 				0751FAE91B96942B008C7B4F /* Board.m in Sources */,
 				0751FAC71B969417008C7B4F /* AppDelegate.m in Sources */,
 				0751FAC41B969417008C7B4F /* main.m in Sources */,
+				072F553F1B9920740026DB37 /* Line.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +428,7 @@
 				0751FAE31B969417008C7B4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0751FAE41B969417008C7B4F /* Build configuration list for PBXNativeTarget "Board with Touch EventsTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +437,7 @@
 				0751FAE61B969417008C7B4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

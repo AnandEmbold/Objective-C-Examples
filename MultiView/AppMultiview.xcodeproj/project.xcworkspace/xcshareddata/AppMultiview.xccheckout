@@ -14,7 +14,7 @@
 		<string>https://github.com/CarlosButron/Objective-C.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>AppMultiview/AppMultiview.xcodeproj</string>
+	<string>MultiView/AppMultiview.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2AE71180FEE1D18FDB0AB08F33008D9704F946C2</key>

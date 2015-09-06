@@ -461,6 +461,7 @@
 				078F349D18DE113F00BE4DDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		078F349E18DE113F00BE4DDB /* Build configuration list for PBXNativeTarget "AppKVOTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +470,7 @@
 				078F34A018DE113F00BE4DDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

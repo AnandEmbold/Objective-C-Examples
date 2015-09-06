@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondos-pantalla-ios-7-16-347x650.png" translatesAutoresizingMaskIntoConstraints="NO" id="syH-rP-osy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="syH-rP-osy">
                                 <rect key="frame" x="0.0" y="-41" width="347" height="650"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4i-od-oQH">
@@ -92,7 +92,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fondos-pantalla-ios-7-16-347x650.png" width="347" height="650"/>
+        <image name="background.png" width="347" height="650"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

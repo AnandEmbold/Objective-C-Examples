@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CBD6BF82-376B-4D45-8F0F-4994992BC323</string>
+	<string>7C11C53D-864D-4851-ABE4-C8C03377899C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>AppToolBar</string>
+	<string>Table MVC</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2AE71180FEE1D18FDB0AB08F33008D9704F946C2</key>
 		<string>https://github.com/CarlosButron/Objective-C.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ToolBar/AppToolBar.xcodeproj</string>
+	<string>Table MVC/Table MVC.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2AE71180FEE1D18FDB0AB08F33008D9704F946C2</key>

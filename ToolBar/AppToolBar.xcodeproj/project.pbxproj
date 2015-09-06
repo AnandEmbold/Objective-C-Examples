@@ -22,7 +22,7 @@
 		0784763D189A7057006B5F17 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0784761F189A7057006B5F17 /* UIKit.framework */; };
 		07847645189A7057006B5F17 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07847643189A7057006B5F17 /* InfoPlist.strings */; };
 		07847647189A7057006B5F17 /* AppToolBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07847646189A7057006B5F17 /* AppToolBarTests.m */; };
-		07847651189A7246006B5F17 /* fondos-pantalla-ios-7-16-347x650.png in Resources */ = {isa = PBXBuildFile; fileRef = 07847650189A7246006B5F17 /* fondos-pantalla-ios-7-16-347x650.png */; };
+		07847651189A7246006B5F17 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 07847650189A7246006B5F17 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		07847642189A7057006B5F17 /* AppToolBarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppToolBarTests-Info.plist"; sourceTree = "<group>"; };
 		07847644189A7057006B5F17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07847646189A7057006B5F17 /* AppToolBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppToolBarTests.m; sourceTree = "<group>"; };
-		07847650189A7246006B5F17 /* fondos-pantalla-ios-7-16-347x650.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fondos-pantalla-ios-7-16-347x650.png"; sourceTree = "<group>"; };
+		07847650189A7246006B5F17 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 		0784760F189A7057006B5F17 = {
 			isa = PBXGroup;
 			children = (
-				07847650189A7246006B5F17 /* fondos-pantalla-ios-7-16-347x650.png */,
+				07847650189A7246006B5F17 /* background.png */,
 				07847621189A7057006B5F17 /* AppToolBar */,
 				07847640189A7057006B5F17 /* AppToolBarTests */,
 				0784761A189A7057006B5F17 /* Frameworks */,
@@ -236,7 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07847651189A7246006B5F17 /* fondos-pantalla-ios-7-16-347x650.png in Resources */,
+				07847651189A7246006B5F17 /* background.png in Resources */,
 				07847634189A7057006B5F17 /* Images.xcassets in Resources */,
 				07847626189A7057006B5F17 /* InfoPlist.strings in Resources */,
 				0784762F189A7057006B5F17 /* Main.storyboard in Resources */,

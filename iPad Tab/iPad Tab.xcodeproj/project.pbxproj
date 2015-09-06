@@ -465,6 +465,7 @@
 				0769D2AA191954D700F9796C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0769D2AB191954D700F9796C /* Build configuration list for PBXNativeTarget "iPad TabTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +474,7 @@
 				0769D2AD191954D700F9796C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

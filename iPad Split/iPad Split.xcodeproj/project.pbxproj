@@ -475,6 +475,7 @@
 				07E744BA191AA5B30050F855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07E744BB191AA5B30050F855 /* Build configuration list for PBXNativeTarget "iPad SplitTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +484,7 @@
 				07E744BD191AA5B30050F855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

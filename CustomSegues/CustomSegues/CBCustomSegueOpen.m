@@ -1,5 +1,5 @@
 //
-//  CBCustomSegueAbrir.m
+//  CBCustomSegueOpen.m
 //  CustomSegues
 //
 //  Created by Carlos on 04/05/14.

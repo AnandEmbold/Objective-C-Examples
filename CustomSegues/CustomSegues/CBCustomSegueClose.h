@@ -1,5 +1,5 @@
 //
-//  CBCustomSegueCerrar.h
+//  CBCustomSegueClose.h
 //  CustomSegues
 //
 //  Created by Carlos on 04/05/14.

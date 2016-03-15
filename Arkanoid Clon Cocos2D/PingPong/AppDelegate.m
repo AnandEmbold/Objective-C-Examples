@@ -15,7 +15,7 @@
 // The available orientations should be defined in the Info.plist file.
 // And in iOS 6+ only, you can override it in the Root View controller in the "supportedInterfaceOrientations" method.
 // Only valid for iOS 6+. NOT VALID for iOS 4 / 5.
--(NSUInteger)supportedInterfaceOrientations {
+- (NSUInteger)supportedInterfaceOrientations {
 	
 	// iPhone only
 	if( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
@@ -27,8 +27,7 @@
 
 // Supported orientations. Customize it for your own needs
 // Only valid on iOS 4 / 5. NOT VALID for iOS 6.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// iPhone only
 	if( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
 		return UIInterfaceOrientationIsPortrait(interfaceOrientation);
@@ -49,19 +48,17 @@
 		[director runWithScene: [IntroLayer scene]];
 	}
 }
-@end
 
+@end
 
 @implementation AppController
 
 @synthesize window=window_, navController=navController_, director=director_;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	
-	
+
 	// CCGLView creation
 	// viewWithFrame: size of the OpenGL view. For full screen use [_window bounds]
 	//  - Possible values: any CGRect
@@ -75,18 +72,12 @@
 	//  - Possible values: YES, NO
 	// numberOfSamples: Only valid if multisampling is enabled
 	//  - Possible values: 0 to glGetIntegerv(GL_MAX_SAMPLES_APPLE)
-	CCGLView *glView = [CCGLView viewWithFrame:[window_ bounds]
-								   pixelFormat:kEAGLColorFormatRGB565
-								   depthFormat:0
-							preserveBackbuffer:NO
-									sharegroup:nil
-								 multiSampling:NO
-							   numberOfSamples:0];
+	CCGLView *glView = [CCGLView viewWithFrame:[window_ bounds] pixelFormat:kEAGLColorFormatRGB565 depthFormat:0 preserveBackbuffer:NO sharegroup:nil multiSampling:NO numberOfSamples:0];
 	
 	director_ = (CCDirectorIOS*) [CCDirector sharedDirector];
 	
 	//director_.wantsFullScreenLayout = YES;
-    director_.extendedLayoutIncludesOpaqueBars = YES;
+    	director_.extendedLayoutIncludesOpaqueBars = YES;
 	
 	// Display FSP and SPF
 	[director_ setDisplayStats:NO];
@@ -102,8 +93,9 @@
 	//	[director setProjection:kCCDirectorProjection3D];
 	
 	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-	if( ! [director_ enableRetinaDisplay:YES] )
+	if( ! [director_ enableRetinaDisplay:YES] ) {
 		CCLOG(@"Retina Display Not supported");
+	}
 	
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
 	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
@@ -140,55 +132,51 @@
 }
 
 // getting a call, pause the game
--(void) applicationWillResignActive:(UIApplication *)application
-{
-	if( [navController_ visibleViewController] == director_ )
+- (void) applicationWillResignActive:(UIApplication *)application {
+	if( [navController_ visibleViewController] == director_ ) {
 		[director_ pause];
+	}
 }
 
 // call got rejected
--(void) applicationDidBecomeActive:(UIApplication *)application
-{
+- (void) applicationDidBecomeActive:(UIApplication *)application {
 	[[CCDirector sharedDirector] setNextDeltaTimeZero:YES];	
-	if( [navController_ visibleViewController] == director_ )
+	if( [navController_ visibleViewController] == director_ ) {
 		[director_ resume];
+	}
 }
 
--(void) applicationDidEnterBackground:(UIApplication*)application
-{
-	if( [navController_ visibleViewController] == director_ )
+- (void) applicationDidEnterBackground:(UIApplication*)application {
+	if( [navController_ visibleViewController] == director_ ) {
 		[director_ stopAnimation];
+	}
 }
 
--(void) applicationWillEnterForeground:(UIApplication*)application
-{
-	if( [navController_ visibleViewController] == director_ )
+-(void) applicationWillEnterForeground:(UIApplication*)application {
+	if( [navController_ visibleViewController] == director_ ) {
 		[director_ startAnimation];
+	}
 }
 
 // application will be killed
-- (void)applicationWillTerminate:(UIApplication *)application
-{
+- (void)applicationWillTerminate:(UIApplication *)application {
 	CC_DIRECTOR_END();
 }
 
 // purge memory
-- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
-{
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
 	[[CCDirector sharedDirector] purgeCachedData];
 }
 
 // next delta time will be zero
--(void) applicationSignificantTimeChange:(UIApplication *)application
-{
+- (void) applicationSignificantTimeChange:(UIApplication *)application {
 	[[CCDirector sharedDirector] setNextDeltaTimeZero:YES];
 }
 
-- (void) dealloc
-{
+- (void) dealloc {
 	[window_ release];
 	[navController_ release];
-	
 	[super dealloc];
 }
+
 @end

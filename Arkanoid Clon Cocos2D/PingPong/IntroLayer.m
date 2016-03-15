@@ -5,20 +5,16 @@
 //  Created by Carlos Butron on 25/05/14.
 //
 
-
 // Import the interfaces
 #import "IntroLayer.h"
 #import "HelloWorldLayer.h"
 
-
 #pragma mark - IntroLayer
-
 // HelloWorldLayer implementation
 @implementation IntroLayer
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
-+(CCScene *) scene
-{
++ (CCScene *) scene {
 	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
 	
@@ -32,11 +28,8 @@
 	return scene;
 }
 
-// 
--(id) init
-{
+- (id) init {
 	if( (self=[super init])) {
-
 		// ask director for the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
 
@@ -53,13 +46,12 @@
 		// add the label as a child to this Layer
 		[self addChild: background];
 	}
-	
 	return self;
 }
 
--(void) onEnter
-{
+- (void) onEnter {
 	[super onEnter];
 	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[HelloWorldLayer scene] ]];
 }
+
 @end

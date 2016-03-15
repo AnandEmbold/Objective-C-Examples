@@ -1,5 +1,5 @@
 //
-//  Raqueta.h
+//  Brick.h
 //  PingPong
 //
 //  Created by Carlos Butron on 25/05/14.
@@ -9,7 +9,7 @@
 
 @interface Brick : CCSprite <CCTouchOneByOneDelegate>
 
-@property (nonatomic)           BOOL   caught;
+@property (nonatomic) BOOL caught;
 @property (nonatomic, readonly) CGRect rect;
 @property (nonatomic, readonly) CGRect rectInPixels;
 

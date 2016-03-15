@@ -1,5 +1,5 @@
 //
-//  Bloque.h
+//  Block.h
 //  PingPong
 //
 //  Created by Carlos Butron on 25/05/14.

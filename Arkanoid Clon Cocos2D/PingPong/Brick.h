@@ -14,4 +14,3 @@
 @property (nonatomic, readonly) CGRect rectInPixels;
 
 @end
-

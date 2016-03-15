@@ -19,12 +19,10 @@
     [super viewDidLoad];
     
     self.title =@"Screen 1";
-    
     [self createViews];
-    
 }
 
--(void)createViews{
+- (void)createViews {
     
     UILabel *red = [[UILabel alloc]init];
     red.backgroundColor = [UIColor yellowColor];
@@ -38,13 +36,10 @@
     green.text = @"green";
     green.textColor = [UIColor whiteColor];
     green.textAlignment = NSTextAlignmentCenter;
-    //   [green setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
+    //  [green setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     id top = self.topLayoutGuide;
     id bottom = self.bottomLayoutGuide;
-    
-    
     
     UILabel *blue = [[UILabel alloc]init];
     blue.backgroundColor = [UIColor blueColor];
@@ -52,15 +47,12 @@
     blue.textColor = [UIColor whiteColor];
     blue.textAlignment = NSTextAlignmentCenter;
     //   [blue setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
     //   [self.black addSubview:red];
-    //    [self.black addSubview:blue];
+    //   [self.black addSubview:blue];
     //   [self.black addSubview:green];
     
     // NSDictionary *views = @{@"blue":blue, @"red":red, @"green":green};
-    
     NSDictionary *views = NSDictionaryOfVariableBindings(red,blue,green, top, bottom);
-    
     //  NSDictionary *views2 = VarBindings(green, blue); //shortcut of the helper class.
     
     [AutolayoutHelper configureView:self.view
@@ -74,14 +66,10 @@
                                       ]];
     /*
      NSArray *cs1 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[blue]-[red]-|" options:0 metrics:nil views:views];
-     
      NSArray *cs2 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[blue(==green)]-[green]-|" options:0 metrics:nil views:views];
-     
      NSArray *cs3 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[red]-[green]-|" options:0 metrics:nil views:views];
-     
      NSArray *cs4 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[green]-|" options:0 metrics:nil views:views];
      */
-    
     
     //blue.width == red.width *0.5
     
@@ -93,7 +81,6 @@
      multiplier:0.5
      constant:0];
      
-     
      //   [self.black addConstraints:cs1];
      //   [self.black addConstraints:cs2];
      //   [self.black addConstraints:cs3];
@@ -104,7 +91,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

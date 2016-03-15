@@ -1,5 +1,5 @@
 //
-//  Pelota.m
+//  Ball.m
 //  PingPong
 //
 //  Created by Carlos Butron on 25/05/14.
@@ -12,13 +12,11 @@
 
 @synthesize velocity;
 
--(float)radio{
-    
+- (float)radio {
     return self.texture.contentSize.width / 2;
 }
 
-- (void)move:(ccTime)instant
-{
+- (void)move:(ccTime)instant {
     
 	self.position = ccpAdd(self.position, ccpMult(self.velocity, instant));
     
@@ -31,30 +29,21 @@
 	} else if (self.position.y > 480 - self.radio){
         [self setPosition: ccp( self.position.x, 480 - self.radio)];
 		velocity.y *= -1;
-    }/* else if (self.position.y < self.radio){
-      [self setPosition: ccp( self.position.x, self.radio)];
-      velocidad.y *= -1;
-      }*/
-    
-    
+	 }
 }
 
-
--(void)brickContact:(Brick * )brick{
+- (void)brickContact:(Brick * )brick {
     
     CGRect paddleRect = brick.rect;
-	paddleRect.origin.x += brick.position.x;
-	paddleRect.origin.y += brick.position.y;
-    
-	float lowY = CGRectGetMinY(paddleRect);
-	float midY = CGRectGetMidY(paddleRect);
-	float highY = CGRectGetMaxY(paddleRect);
-    
-	float leftX = CGRectGetMinX(paddleRect);
-	float rightX = CGRectGetMaxX(paddleRect);
+    paddleRect.origin.x += brick.position.x;
+    paddleRect.origin.y += brick.position.y;
+    float lowY = CGRectGetMinY(paddleRect);
+    float midY = CGRectGetMidY(paddleRect);
+    float highY = CGRectGetMaxY(paddleRect);
+    float leftX = CGRectGetMinX(paddleRect);
+    float rightX = CGRectGetMaxX(paddleRect);
     
 	if (self.position.x > leftX && self.position.x < rightX) {
-        
 		BOOL contact = NO;
 		float angleOffset = 0.0f;
         
@@ -62,28 +51,21 @@
 			self.position = CGPointMake(self.position.x, highY + self.radio);
 			contact = YES;
 			angleOffset = (float)M_PI / 2;
-		}
-        
-		else if (self.position.y < midY && self.position.y >= lowY - self.radio) {
+		} else if (self.position.y < midY && self.position.y >= lowY - self.radio) {
 			self.position = CGPointMake(self.position.x, lowY - self.radio);
 			contact = YES;
 			angleOffset = -(float)M_PI / 2;
 		}
         
 		if (contact) {
-  
 			float contactAngle = ccpToAngle(ccpSub(brick.position, self.position)) + angleOffset;
-            
 			float angle = -ccpToAngle(self.velocity) + 0.5f * contactAngle;
 			self.velocity = ccpMult(ccpForAngle(angle), ccpLength(self.velocity));
-            
-        }
+        	}
 	}
-    
-    
 }
 
--(int)blockContact:(NSMutableArray *)blocks{
+- (int)blockContact:(NSMutableArray *)blocks {
     
     int tag=0;
     
@@ -111,9 +93,7 @@
                 self.position = CGPointMake(self.position.x, highY + self.radio);
                 contact = YES;
                 angleOffset = (float)M_PI / 2;
-            }
-            
-            else if (self.position.y < midY && self.position.y >= lowY - self.radio) {
+            } else if (self.position.y < midY && self.position.y >= lowY - self.radio) {
                 self.position = CGPointMake(self.position.x, lowY - self.radio);
                 contact = YES;
                 angleOffset = -(float)M_PI / 2;
@@ -122,26 +102,19 @@
             if (contact) {
                 
                 tag=(int)block.tag;
-                
-                
-                
+
                 //change the ball direction on touch with block
                 float contactAngle = ccpToAngle(ccpSub(block.position, self.position)) + angleOffset;
-                
                 float angle = -ccpToAngle(self.velocity) + 0.5f * contactAngle;
                 self.velocity = ccpMult(ccpForAngle(angle), ccpLength(self.velocity));
                 
-                //fin bucle
+                //end bucle
                 i=(int)blocks.count;
-                
                 [blocks removeObject:block];  //delete touch block from array
-                
             }
         }
-        
     }
     return tag;  //return block touched
 }
 
 @end
-

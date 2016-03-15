@@ -11,12 +11,11 @@
 #import "Block.h"
 @interface PingPongLayer : CCLayer
 
-@property (nonatomic,retain)    Ball *    ball;
-@property (nonatomic,retain)    Brick *    brick;
-@property (nonatomic,retain)    Block *    block;
+@property (nonatomic,retain) Ball *ball;
+@property (nonatomic,retain) Brick *brick;
+@property (nonatomic,retain) Block *block;
+@property(nonatomic,retain) NSMutableArray *blocks;
 
-@property(nonatomic,retain) NSMutableArray * blocks;
-
-+(CCScene *)scene;
++ (CCScene *)scene;
     
 @end

@@ -1,5 +1,5 @@
 //
-//  Pelota.h
+//  Ball.h
 //  PingPong
 //
 //  Created by Carlos Butron on 25/05/14.
@@ -16,7 +16,7 @@
 
 - (void)move:(ccTime)instant;
 
--(void)brickContact:(Brick * )brick;
--(int)blockContact:(NSMutableArray *)blocks;
+- (void)brickContact:(Brick * )brick;
+- (int)blockContact:(NSMutableArray *)blocks;
 
 @end

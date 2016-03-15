@@ -5,21 +5,19 @@
 //  Created by Carlos Butron on 25/05/14.
 //
 
-
 // Import the interfaces
 #import "HelloWorldLayer.h"
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
 #import "PingPongLayer.h"
-#pragma mark - HelloWorldLayer
 
+#pragma mark - HelloWorldLayer
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
-+(CCScene *) scene
-{
++ (CCScene *) scene {
 	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
 	
@@ -34,80 +32,49 @@
 }
 
 // on "init" you need to initialize your instance
--(id) init
-{
+- (id) init {
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
 		CGSize size = [[CCDirector sharedDirector] winSize];
         
+        	//add background
+		CCSprite *background = [[[CCSprite alloc] initWithTexture:[[CCTextureCache sharedTextureCache] addImage:@"blackBackground.png"]] autorelease];
+        	background.position = CGPointMake(160.0f, 240.0f);
+        	[self addChild:background];
         
-        //add background
-        CCSprite * fondo = [[[CCSprite alloc] initWithTexture:[[CCTextureCache sharedTextureCache] addImage:@"blackBackground.png"]] autorelease];
-        
-        fondo.position = CGPointMake(160.0f, 240.0f);
-        
-        [self addChild:fondo];
-        
-        //add game title
+        	//add game title
 		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Arkanoid Clon" fontName:@"AppleGothic" fontSize:42];
 		label.position =  ccp( size.width /2 , size.height/2);
 		[self addChild: label];
 		
-        
-        // add author
+        	// add author
 		label = [CCLabelTTF labelWithString:@"Carlos Butron" fontName:@"AppleGothic" fontSize:32];
-        label.position =  ccp( size.width /2 , size.height/2 - 50);
-        
+        	label.position =  ccp( size.width /2 , size.height/2 - 50);
 		[self addChild: label];
-		
-		
-        
-        //add menu screen
+
+        	//add menu screen
 		[CCMenuItemFont setFontSize:28];
-        
 		CCMenuItem *itemJugar = [CCMenuItemFont itemWithString:@"Play" block:^(id sender) {
-			
-			[[CCDirector sharedDirector] pushScene:[PingPongLayer scene]];
-            
-			
+		[[CCDirector sharedDirector] pushScene:[PingPongLayer scene]];
 		}];
 		
-        CCMenu *menu = [CCMenu menuWithItems:itemJugar,nil];
-		
+		// Add the menu to the layer
+        	CCMenu *menu = [CCMenu menuWithItems:itemJugar,nil];
 		[menu alignItemsHorizontallyWithPadding:20];
 		[menu setPosition:ccp( size.width/2, size.height/2 -  200)];
-		
-		// Add the menu to the layer
 		[self addChild:menu];
-
-
 	}
 	return self;
 }
 
 // on "dealloc" you need to release all your retained objects
-- (void) dealloc
-{
+- (void) dealloc {
 	// in case you have something to dealloc, do it in this method
 	// in this particular example nothing needs to be released.
 	// cocos2d will automatically release all the children (Label)
-	
 	// don't forget to call "super dealloc"
 	[super dealloc];
 }
 
-#pragma mark GameKit delegate
-
-//-(void) achievementViewControllerDidFinish:(GKGameCenterViewController *)viewController
-//{
-//	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-//	[[app navController] dismissViewControllerAnimated:YES completion:nil];
-//}
-
-//-(void) leaderboardViewControllerDidFinish:(GKGameCenterViewController *)viewController
-//{
-//	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-//    [[app navController] dismissViewControllerAnimated:YES completion:nil];
-//}
 @end

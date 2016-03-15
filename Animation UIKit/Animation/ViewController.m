@@ -8,30 +8,26 @@
 
 #import "ViewController.h"
 
-@interface ViewController (){
-    
+@interface ViewController () {
+
     BOOL isAnimated;
-    
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
+
 - (IBAction)animation:(id)sender;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     isAnimated = NO;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)animation:(id)sender {
@@ -55,11 +51,9 @@
         
         [UIView commitAnimations];
     }
-    
 }
 
-
-- (void)animationDidEnd:(NSString *)nombre{
+- (void)animationDidEnd:(NSString *)nombre {
     
     if ([nombre isEqualToString:@"MyAnimation"]) {
         CGPoint centro = self.image.center;
@@ -69,7 +63,6 @@
         self.image.alpha = 1.0;
         isAnimated = NO;
     }
-    
 }
 
 @end

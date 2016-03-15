@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Carlos Butron. All rights reserved.
 //
 
-
 // Helper to configure auto layout constraints
 //
 // Based on this tutorial: http://www.thinkandbuild.it/learn-to-love-auto-layout-programmatically/
@@ -15,18 +14,14 @@
 #import <UIKit/UIKit.h>
 
 #define VarBindings NSDictionaryOfVariableBindings
-
 #define PRIORITY_DEFAULT -1
 #define XT_CONSTRAINT_SYMBOL @"X"
 
-
 @interface AutolayoutHelper : NSObject
-
 
 @property(nonatomic, weak) UIView* view;
 @property(nonatomic, strong) NSMutableDictionary* subViews;
 @property(nonatomic, strong) NSDictionary* metrics;
-
 
 + (void)setDisplayBackgroundColorsForDebugging:(BOOL)displayColor;
 

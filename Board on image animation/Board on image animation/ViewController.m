@@ -24,20 +24,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
     self.notificationLabel.alpha=0.0;
-    
-    
     [self addObserver:self forKeyPath:@"velocitySlider.value" options:NSKeyValueObservingOptionNew context:nil];
-    
-
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)labelUpdate:(id)sender {
@@ -50,14 +43,11 @@
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
     imagePicker.delegate = self;
     imagePicker.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    
-    [self presentViewController:imagePicker animated:YES completion:nil];
 
+    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     //dismiss
     [picker dismissViewControllerAnimated:YES completion:nil];
@@ -65,7 +55,6 @@
     self.backgroundImage.alpha=0.0;
     //assign new image to background
     [self.backgroundImage setImage:info[UIImagePickerControllerOriginalImage]];
-    
     
     [UIView beginAnimations:nil context:nil];
     //animation duration and velocity
@@ -77,20 +66,15 @@
     self.backgroundImage.alpha = 0.9;
     
     [UIView commitAnimations];
-    
-    
 }
 
--(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     
-
     CGPoint centro = self.notificationLabel.center;
     centro.y = 78;
     self.notificationLabel.center = centro;
     self.notificationLabel.alpha=1.0;
-
-    
-    
+   
     //set animation
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:1.0];
@@ -102,11 +86,6 @@
     self.notificationLabel.alpha=0.0;
 
     [UIView commitAnimations];
-    
-    
-    
-    
-    
 }
 
 @end

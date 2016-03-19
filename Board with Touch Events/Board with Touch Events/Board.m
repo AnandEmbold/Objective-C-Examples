@@ -50,10 +50,7 @@
     UIColor *rojo = [UIColor redColor];
     CGContextSetStrokeColorWithColor(contexto, rojo.CGColor);
     CGContextSetLineWidth(contexto, 3);
-    
-    
-    
-    
+
     for (int i = 0; i < _lines.count; i++) {
         Line * line = [self.lineas objectAtIndex:i];
         //NSLog(@"drawrect  %f, %f, %f, %f", line.points.origin.x, line.points.origin.y, line.points.size.width, line.points.size.height);

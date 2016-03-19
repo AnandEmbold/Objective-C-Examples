@@ -12,6 +12,6 @@
 
 @property (readwrite) CGRect points;
 
-- (id) initWithRect:(CGRect)points;
+- (id)initWithRect:(CGRect)points;
 
 @end

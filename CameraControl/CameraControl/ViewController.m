@@ -18,26 +18,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-        //singleTAP in imageView
-        [self.imageView setUserInteractionEnabled:YES];
-        UITapGestureRecognizer *singleTap =  [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapping:)];
-        [singleTap setNumberOfTapsRequired:1];
-        [self.imageView addGestureRecognizer:singleTap];
-        [self.view addSubview:self.imageView];
+    //singleTAP in imageView
+    [self.imageView setUserInteractionEnabled:YES];
+    UITapGestureRecognizer *singleTap =  [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapping:)];
+    [singleTap setNumberOfTapsRequired:1];
+    [self.imageView addGestureRecognizer:singleTap];
+    [self.view addSubview:self.imageView];
 
-        //another things
-        //....
+    //another things
+    //....
     
-        //if you dont have camera send an error message
-        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    //if you dont have camera send an error message
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
-        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                              message:@"Device has no camera"
-                                                             delegate:nil
-                                                    cancelButtonTitle:@"OK"
-                                                    otherButtonTitles: nil];
-        [myAlertView show];
-        }
+    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                          message:@"Device has no camera"
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles: nil];
+    [myAlertView show];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,7 +53,6 @@
                                                     otherButtonTitles:@"Take Photo", @"Select Photo", nil];
     [actionSheet showInView:self.view];
 }
-
 
 //actionSheet to select imageAction
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {

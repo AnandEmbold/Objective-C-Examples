@@ -16,9 +16,10 @@
 @end
 
 @interface CBCellWithDelegate : UITableViewCell
-- (IBAction)delegate:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *lblName;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (strong, nonatomic) id<Messages> delegate;
+
+- (IBAction)delegate:(id)sender;
 
 @end

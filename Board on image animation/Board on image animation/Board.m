@@ -9,7 +9,8 @@
 #import "Board.h"
 #import "Line.h"
 
-@interface Board(){
+@interface Board()
+{
     CGPoint start;
     CGPoint end;
     NSMutableArray * _lines;
@@ -46,7 +47,6 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    
     //draw all lines in NSMutableArray. red color. size 3
     CGContextRef context = UIGraphicsGetCurrentContext();
     UIColor * red = [UIColor redColor];
@@ -64,18 +64,18 @@
     CGContextStrokePath(context);
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
+{
     //update start and end
     UITouch *touch = [touches anyObject];
     start = [touch previousLocationInView:self];
     end = [touch locationInView:self];
     
     [self setNeedsDisplay];
-    
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
     //add coordinates of movement to NSMutableArray lines with class Line
     //update start and end
     //reload view

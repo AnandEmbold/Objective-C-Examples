@@ -33,12 +33,13 @@
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)labelUpdate:(id)sender {
+- (IBAction)labelUpdate:(id)sender 
+{
     self.notificationLabel.text = [NSString stringWithFormat:@"%1.1f s", self.velocitySlider.value];
 }
 
-- (IBAction)imageSelect:(id)sender {
-    
+- (IBAction)imageSelect:(id)sender 
+{
     //modal view to select image
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
     imagePicker.delegate = self;
@@ -47,8 +48,8 @@
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info 
+{
     //dismiss
     [picker dismissViewControllerAnimated:YES completion:nil];
     //assign alpla 0 to background
@@ -68,11 +69,11 @@
     [UIView commitAnimations];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    
-    CGPoint centro = self.notificationLabel.center;
-    centro.y = 78;
-    self.notificationLabel.center = centro;
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context 
+{
+    CGPoint center = self.notificationLabel.center;
+    center.y = 78;
+    self.notificationLabel.center = center;
     self.notificationLabel.alpha=1.0;
    
     //set animation
@@ -81,8 +82,8 @@
     [UIView setAnimationDelay:2.0];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
     
-    centro.y = 20;
-    self.notificationLabel.center = centro;
+    center.y = 20;
+    self.notificationLabel.center = center;
     self.notificationLabel.alpha=0.0;
 
     [UIView commitAnimations];

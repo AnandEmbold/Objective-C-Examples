@@ -8,8 +8,8 @@
 
 #import "ViewController.h"
 
-@interface ViewController () {
-
+@interface ViewController () 
+{
     BOOL isAnimated;
 }
 
@@ -21,16 +21,19 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad 
+{
     [super viewDidLoad];
     isAnimated = NO;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning 
+{
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)animation:(id)sender {
+- (IBAction)animation:(id)sender 
+{
     if (!isAnimated) {
         isAnimated = YES;
         
@@ -53,8 +56,8 @@
     }
 }
 
-- (void)animationDidEnd:(NSString *)nombre {
-    
+- (void)animationDidEnd:(NSString *)nombre 
+{
     if ([nombre isEqualToString:@"MyAnimation"]) {
         CGPoint centro = self.image.center;
         centro.y -= 50;

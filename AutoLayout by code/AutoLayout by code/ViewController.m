@@ -15,15 +15,16 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad 
+{
     [super viewDidLoad];
     
     self.title =@"Screen 1";
     [self createViews];
 }
 
-- (void)createViews {
-    
+- (void)createViews 
+{
     UILabel *red = [[UILabel alloc]init];
     red.backgroundColor = [UIColor yellowColor];
     red.text = @"red";
@@ -89,7 +90,8 @@
      */
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning 
+{
     [super didReceiveMemoryWarning];
 }
 

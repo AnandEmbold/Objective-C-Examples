@@ -9,8 +9,6 @@
 
 @implementation Brick
 
-
-
 - (CGRect)rectInPixels
 {
 	CGSize s = [self.texture contentSizeInPixels];
@@ -23,13 +21,11 @@
 	return CGRectMake(-s.width / 2, -s.height / 2, s.width, s.height);
 }
 
-
 #pragma mark - Métodos delegados del protocolo CCTouchOneByOneDelegate
 
 - (void)onEnter
 {
 	CCDirector *director =  [CCDirector sharedDirector];
-    
 	[[director touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
 	[super onEnter];
 }
@@ -37,7 +33,6 @@
 - (void)onExit
 {
 	CCDirector *director = [CCDirector sharedDirector];
-    
 	[[director touchDispatcher] removeDelegate:self];
 	[super onExit];
 }
@@ -68,4 +63,5 @@
 {
 	self.caught = NO;
 }
+
 @end

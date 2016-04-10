@@ -24,19 +24,23 @@ NSRegularExpression * xtConstraintRegex;
 NSDictionary* attributes;
 NSDictionary* relations;
 
-+ (void) initialize {
++ (void) initialize 
+{
     [self initializeXtConstraintLogic];
 }
 
-+ (void)setDisplayBackgroundColorsForDebugging:(BOOL)displayColors {
++ (void)setDisplayBackgroundColorsForDebugging:(BOOL)displayColors 
+{
     displayBackgroundColorsForDebugging = displayColors;
 }
 
-+ (AutolayoutHelper*)configureView:(UIView*)view subViews:(NSDictionary*)subViews constraints:(NSArray*)constraints {
++ (AutolayoutHelper*)configureView:(UIView*)view subViews:(NSDictionary*)subViews constraints:(NSArray*)constraints 
+{
     return [AutolayoutHelper configureView:view subViews:subViews metrics:nil constraints:constraints];
 }
 
-+ (AutolayoutHelper*)configureView:(UIView*)view subViews:(NSDictionary*)subViews metrics:(NSDictionary*)metrics constraints:(NSArray*)constraints {
++ (AutolayoutHelper*)configureView:(UIView*)view subViews:(NSDictionary*)subViews metrics:(NSDictionary*)metrics constraints:(NSArray*)constraints 
+{
     AutolayoutHelper* helper = [[AutolayoutHelper alloc] initWithView:view];
     
     helper.metrics = metrics;
@@ -45,7 +49,8 @@ NSDictionary* relations;
     return helper;
 }
 
-- (id)initWithView:(UIView*)view {
+- (id)initWithView:(UIView*)view 
+{
     self = [super init];
     
     self.view = view;
@@ -55,15 +60,16 @@ NSDictionary* relations;
     return self;
 }
 
-- (void)addViews:(NSDictionary*)subViews {
-    
+- (void)addViews:(NSDictionary*)subViews 
+{
     for (NSString* subViewKey in subViews.allKeys) {
         UIView* subView = subViews[subViewKey];
         [self addView:subView withKey:subViewKey];
     }
 }
 
-- (void)addView:(UIView*)subView withKey:(NSString *)subViewKey{
+- (void)addView:(UIView*)subView withKey:(NSString *)subViewKey
+{
     subView.translatesAutoresizingMaskIntoConstraints = NO;
     
     self.subViews[subViewKey] = subView;
@@ -80,16 +86,19 @@ NSDictionary* relations;
     }
 }
 
-- (void)addViews:(NSDictionary*)subViews constraints:(NSArray*)constraints {
+- (void)addViews:(NSDictionary*)subViews constraints:(NSArray*)constraints 
+{
     [self addViews:subViews];
     [self addConstraints:constraints];
 }
 
-- (void)removeViews:(NSDictionary*)subViews {
+- (void)removeViews:(NSDictionary*)subViews 
+{
     [self removeViewsWithKeys:subViews.allKeys];
 }
 
-- (void)removeViewsWithKeys:(NSArray*)viewKeys {
+- (void)removeViewsWithKeys:(NSArray*)viewKeys 
+{
     for (NSString* viewKey in viewKeys) {
         UIView* subView = self.subViews[viewKey];
         [subView removeFromSuperview];
@@ -97,21 +106,25 @@ NSDictionary* relations;
     }
 }
 
-- (void)addConstraints:(NSArray*)constraints {
+- (void)addConstraints:(NSArray*)constraints 
+{
     [self addConstraints:constraints priority:PRIORITY_DEFAULT];
 }
 
-- (void)addConstraints:(NSArray*)constraints priority:(UILayoutPriority)priority {
+- (void)addConstraints:(NSArray*)constraints priority:(UILayoutPriority)priority 
+{
     for (NSString* constraint in constraints) {
         [self addConstraint:constraint priority:priority];
     }
 }
 
-- (NSArray*)addConstraint:(NSString*)constraint {
+- (NSArray*)addConstraint:(NSString*)constraint 
+{
     return [self addConstraint:constraint priority:PRIORITY_DEFAULT];
 }
 
-- (NSArray*)addConstraint:(NSString*)constraint priority:(UILayoutPriority)priority {
+- (NSArray*)addConstraint:(NSString*)constraint priority:(UILayoutPriority)priority 
+{
     NSArray *constraints = [self parseConstraint:constraint];
     
     if (priority != PRIORITY_DEFAULT) {
@@ -125,7 +138,8 @@ NSDictionary* relations;
     return constraints;
 }
 
-- (NSArray*)parseConstraint:(NSString *)constraint {
+- (NSArray*)parseConstraint:(NSString *)constraint 
+{
     if ([constraint hasPrefix:XT_CONSTRAINT_SYMBOL]) {
         return [self parseXtConstraint:constraint];
     } else {
@@ -137,8 +151,8 @@ NSDictionary* relations;
     }
 }
 
-+ (void)configureScrollView:(UIScrollView*)scrollView contentView:(UIView*)contentView mainView:(UIView*)mainView {
-    
++ (void)configureScrollView:(UIScrollView*)scrollView contentView:(UIView*)contentView mainView:(UIView*)mainView 
+{
     [AutolayoutHelper configureView:scrollView
                            subViews:NSDictionaryOfVariableBindings(contentView)
                         constraints:@[ @"H:|[contentView]|", @"V:|[contentView]|" ]];
@@ -147,12 +161,13 @@ NSDictionary* relations;
     [mainView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[contentView(==mainView)]" options:0 metrics:0 views:viewDict]];
 }
 
-- (void)setConstraints:(NSArray*)constraints forKey:(NSString*)key {
+- (void)setConstraints:(NSArray*)constraints forKey:(NSString*)key 
+{
     [self setConstraints:constraints priority:PRIORITY_DEFAULT forKey:key];
 }
 
-- (void)setConstraints:(NSArray*)constraints priority:(UILayoutPriority)priority forKey:(NSString*)key {
-    
+- (void)setConstraints:(NSArray*)constraints priority:(UILayoutPriority)priority forKey:(NSString*)key 
+{
     // Remove previously added constraints for that key
     NSArray* constraintsToRemove = self.temporalConstraints[key];
     
@@ -169,14 +184,13 @@ NSDictionary* relations;
         NSArray* resultingConstraints = [self addConstraint:constraint priority:priority];
         [addedConstraints addObjectsFromArray:resultingConstraints];
     }
-    
     self.temporalConstraints[key] = addedConstraints;
 }
 
-
 #pragma mark - xt constaints
 
-+ (void)initializeXtConstraintLogic {
++ (void)initializeXtConstraintLogic 
+{
     [self initializeXtConstraintRegex];
     
     attributes = @{
@@ -200,7 +214,8 @@ NSDictionary* relations;
                   };
 }
 
-+ (void)initializeXtConstraintRegex {
++ (void)initializeXtConstraintRegex 
+{
     NSError* error = nil;
     // C identifier
     NSString* identifier = @"[_a-zA-Z][_a-zA-Z0-9]{0,30}";
@@ -226,7 +241,8 @@ NSDictionary* relations;
                          error:&error];
 }
 
-- (NSArray*)parseXtConstraint:(NSString*)constraint {
+- (NSArray*)parseXtConstraint:(NSString*)constraint 
+{
     NSArray* results = [xtConstraintRegex matchesInString:constraint
                                                   options:0
                                                     range:NSMakeRange(0, constraint.length)];
@@ -282,7 +298,6 @@ NSDictionary* relations;
             constant = -constant;
         }
     }
-    
     NSLayoutConstraint* c =
     [NSLayoutConstraint constraintWithItem:item1
                                  attribute:attr1
@@ -291,11 +306,11 @@ NSDictionary* relations;
                                  attribute:attr2
                                 multiplier:multiplier
                                   constant:constant];
-    
     return @[c];
 }
 
-- (float)getFloatFromValue:(NSString*)value {
+- (float)getFloatFromValue:(NSString*)value 
+{
     if ([self stringStartsWithAlphaOrUnderscore:value]) { // if so, must be a metric identifier
         NSNumber* metric = self.metrics[value];
         if (metric) {
@@ -309,12 +324,14 @@ NSDictionary* relations;
     }
 }
 
-- (BOOL)stringStartsWithAlphaOrUnderscore:(NSString*)value {
+- (BOOL)stringStartsWithAlphaOrUnderscore:(NSString*)value 
+{
     unichar c = [value characterAtIndex:0];
     return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '_';
 }
 
-- (id)findViewFromKey:(NSString*)key {
+- (id)findViewFromKey:(NSString*)key 
+{
     if ([key isEqualToString:@"superview"]) {
         return self.view;
     } else {
@@ -328,7 +345,8 @@ NSDictionary* relations;
     }
 }
 
-- (NSLayoutAttribute)parseAttribute:(NSString*)attrStr {
+- (NSLayoutAttribute)parseAttribute:(NSString*)attrStr 
+{
     NSNumber* value = attributes[attrStr];
     
     if (value) {
@@ -339,7 +357,8 @@ NSDictionary* relations;
     }
 }
 
-- (NSLayoutRelation)parseRelation:(NSString*)relationStr {
+- (NSLayoutRelation)parseRelation:(NSString*)relationStr 
+{
     NSNumber* value = relations[relationStr];
     
     if (value) {
@@ -351,12 +370,14 @@ NSDictionary* relations;
     }
 }
 
-- (void)throwInvalidConstraint:(NSString*)constraint {
+- (void)throwInvalidConstraint:(NSString*)constraint 
+{
     [NSException raise:XT_CONSTRAINT_ERROR
                 format:@"%@: %@", XT_CONSTRAINT_ERROR, constraint];
 }
 
--(void)dumpMatch:(NSTextCheckingResult*)match forString:(NSString*)str {
+-(void)dumpMatch:(NSTextCheckingResult*)match forString:(NSString*)str 
+{
     for (NSUInteger i=0; i<match.numberOfRanges; i++) {
         NSRange range = [match rangeAtIndex:i];
         if (range.location != NSNotFound) {

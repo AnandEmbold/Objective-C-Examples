@@ -11,17 +11,19 @@
 
 @implementation Score
 
-+ (CCScene *)scene {
++ (CCScene *)scene 
+{
     CCScene * scoreScene = [[CCScene alloc] init];
     [scoreScene addChild:[self node]];
     return scoreScene;
 }
 
 // on "init" you need to initialize your instance
-- (id) init {
+- (id) init 
+{
     // always call "super" init
     // Apple recommends to re-assign "self" with the "super's" return value
-    if( (self=[super init]) ) {
+    if ((self=[super init])) {
 	CGSize size = [[CCDirector sharedDirector] winSize];
         
         //add background
@@ -74,7 +76,8 @@
 }
 
 // on "dealloc" you need to release all your retained objects
-- (void) dealloc {
+- (void) dealloc 
+{
     // in case you have something to dealloc, do it in this method
     // in this particular example nothing needs to be released.
     // cocos2d will automatically release all the children (Label)
@@ -84,12 +87,14 @@
 
 #pragma mark GameKit delegate
 
-- (void) achievementViewControllerDidFinish:(GKGameCenterViewController *)viewController {
+- (void) achievementViewControllerDidFinish:(GKGameCenterViewController *)viewController 
+{
     AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
     [[app navController] dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void) leaderboardViewControllerDidFinish:(GKGameCenterViewController *)viewController {
+- (void) leaderboardViewControllerDidFinish:(GKGameCenterViewController *)viewController 
+{
     AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
     [[app navController] dismissViewControllerAnimated:YES completion:nil];
 }

@@ -15,7 +15,6 @@
 @property (nonatomic) float radio;
 
 - (void)move:(ccTime)instant;
-
 - (void)brickContact:(Brick * )brick;
 - (int)blockContact:(NSMutableArray *)blocks;
 

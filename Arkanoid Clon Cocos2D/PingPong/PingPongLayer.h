@@ -9,6 +9,7 @@
 #import "Ball.h"
 #import "Brick.h"
 #import "Block.h"
+
 @interface PingPongLayer : CCLayer
 
 @property (nonatomic,retain) Ball *ball;

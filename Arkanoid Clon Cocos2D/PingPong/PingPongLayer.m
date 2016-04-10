@@ -8,14 +8,15 @@
 #import "PingPongLayer.h"
 #import "Score.h"
 
-@implementation PingPongLayer {
+@implementation PingPongLayer 
+{
     int percentDestroyedBlocks; //score percent
     NSString * destroyed;
     NSUserDefaults *userDefaults;  //to save score
 }
 
-- (id)init {
-    
+- (id)init 
+{
     destroyed =@"%"; //score percent
     if ((self = [super init]) == nil) {
     	return nil;
@@ -44,7 +45,6 @@
     int moveVertical=0;
     
     for(int i = 0; i < 6; i++) {
-        
         moveHorizontal=moveHorizontal+52;
         moveVertical=0;
         
@@ -81,7 +81,8 @@
     return self;
 }
 
-- (void)animation:(ccTime)instante {
+- (void)animation:(ccTime)instante 
+{
     int tagblock;  //block id when touch the ball
     [self.ball move:instante];
     [self.ball brickContact:self.brick];
@@ -118,7 +119,8 @@
     }
 }
 
-+ (CCScene *)scene {
++ (CCScene *)scene 
+{
     CCScene * arkanoidScene = [[CCScene alloc] init];
     [arkanoidScene addChild:[self node]];
     return arkanoidScene;

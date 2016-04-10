@@ -12,11 +12,13 @@
 
 @synthesize velocity;
 
-- (float)radio {
+- (float)radio 
+{
     return self.texture.contentSize.width / 2;
 }
 
-- (void)move:(ccTime)instant {
+- (void)move:(ccTime)instant 
+{
     
 	self.position = ccpAdd(self.position, ccpMult(self.velocity, instant));
     
@@ -32,8 +34,8 @@
 	 }
 }
 
-- (void)brickContact:(Brick * )brick {
-    
+- (void)brickContact:(Brick * )brick 
+{
     CGRect paddleRect = brick.rect;
     paddleRect.origin.x += brick.position.x;
     paddleRect.origin.y += brick.position.y;
@@ -65,8 +67,8 @@
 	}
 }
 
-- (int)blockContact:(NSMutableArray *)blocks {
-    
+- (int)blockContact:(NSMutableArray *)blocks 
+{
     int tag=0;
     
     for(int i=0;i<blocks.count;i++){

@@ -9,7 +9,8 @@
 #import "Board.h"
 #import "Line.h"
 
-@interface Board(){
+@interface Board()
+{
     CGPoint start;
     CGPoint end;
     NSMutableArray * _lines;
@@ -22,29 +23,32 @@
 @implementation Board
 @synthesize lines;
 
-- (IBAction)delete:(id)sender {
+- (IBAction)delete:(id)sender 
+{
     //reload view deleting all lines
     [self.lines removeAllObjects];
     
     [self setNeedsDisplay];
 }
 
-- (id)initWithFrame:(CGRect)frame {
+- (id)initWithFrame:(CGRect)frame 
+{
     self = [super initWithFrame:frame];
     if (self) {
     }
     return self;
 }
 
-- (NSMutableArray *)lineas{
+- (NSMutableArray *)lineas
+{
     if (_lines == nil) {
         _lines = [NSMutableArray new];
     }
     return _lines;
 }
 
-- (void)drawRect:(CGRect)rect {
-    
+- (void)drawRect:(CGRect)rect 
+{
     //draw all lines in NSMutableArray. red color. size 3
     CGContextRef contexto = UIGraphicsGetCurrentContext();
     UIColor *rojo = [UIColor redColor];
@@ -62,8 +66,8 @@
     CGContextStrokePath(contexto);
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
+{
     //update start and end
     UITouch *touch = [touches anyObject];
     start = [touch previousLocationInView:self];
@@ -71,8 +75,8 @@
     [self setNeedsDisplay];
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event 
+{
     //add coordinates of movement to NSMutableArray lines with class Line
     //update start and end
     //reload view

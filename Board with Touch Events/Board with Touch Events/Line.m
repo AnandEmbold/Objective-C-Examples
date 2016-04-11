@@ -11,11 +11,13 @@
 @implementation Line
 @synthesize points = _points;
 
-- (id)initWithRect:(CGRect)points {
+- (id)initWithRect:(CGRect)points 
+{
     self = [super init];
     if (self) {
         self.points = points;
     }
+    
     return self;
 }
 

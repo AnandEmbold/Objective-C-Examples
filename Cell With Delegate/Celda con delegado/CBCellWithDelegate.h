@@ -10,7 +10,6 @@
 
 @protocol Messages
 
-
 -(void)showMessage:(NSString *) msg;
 
 @end

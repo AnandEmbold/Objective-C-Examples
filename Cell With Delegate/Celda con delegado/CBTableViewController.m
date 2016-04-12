@@ -21,6 +21,7 @@
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
@@ -82,7 +83,8 @@
     return cell;
 }
 
--(void)showMessage:(NSString *)msg{
+- (void)showMessage:(NSString *)msg
+{
     UIAlertView * alerta = [[UIAlertView alloc] initWithTitle:@"I am..." message:msg delegate:self cancelButtonTitle:@"close" otherButtonTitles:nil];
     [alerta show];
 }

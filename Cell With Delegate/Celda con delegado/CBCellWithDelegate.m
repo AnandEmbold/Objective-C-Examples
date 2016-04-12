@@ -15,6 +15,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
     }
+    
     return self;
 }
 
@@ -23,8 +24,8 @@
     [super setSelected:selected animated:animated];
 }
 
-- (IBAction)delegate:(id)sender {
-    
+- (IBAction)delegate:(id)sender 
+{
     [self.delegate showMessage:self.lblName.text];
 }
 

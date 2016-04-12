@@ -15,7 +15,8 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad 
+{
     [super viewDidLoad];
 
     //singleTAP in imageView
@@ -27,7 +28,6 @@
 
     //another things
     //....
-    
     //if you dont have camera send an error message
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
@@ -40,12 +40,14 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning 
+{
     [super didReceiveMemoryWarning];
 }
 
 //SingleTap in imageView
-- (void)singleTapping:(UIGestureRecognizer *)recognizer {
+- (void)singleTapping:(UIGestureRecognizer *)recognizer 
+{
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select the operation to proceed?"
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
@@ -55,7 +57,8 @@
 }
 
 //actionSheet to select imageAction
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex 
+{
     if(buttonIndex == 0) {
         NSLog(@"Take Photo Button Clicked");
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -75,15 +78,15 @@
     }
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info 
+{
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker 
+{
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 

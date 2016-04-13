@@ -18,21 +18,20 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad 
+{
     [super viewDidLoad];
     
     self.money = 100;
-    
     self.test = nil;
     
-   NSLog(@"100 euros are %f pesetas", [EuroConverter convertFromEuroToPeseta:self.money]);
-   NSLog(@"100 pesetas are %d euros", [EuroConverter convertFromPesetaToEuro:self.money]);
+    NSLog(@"100 euros are %f pesetas", [EuroConverter convertFromEuroToPeseta:self.money]);
+    NSLog(@"100 pesetas are %d euros", [EuroConverter convertFromPesetaToEuro:self.money]);
     
     EuroConverter *converter = [[EuroConverter alloc] initWithMoney:self.money];
     
-   // NSLog(@"%f pesetas are %f euros", self.money, converter.convertToEuro);
+    // NSLog(@"%f pesetas are %f euros", self.money, converter.convertToEuro);
     NSLog(@"%f euros are %ld pesetas", self.money, [converter convertToPeseta]);
-
     NSLog(@"%f euros are %ld pesetas", self.money, converter.convertToPeseta);
     
     //with selector
@@ -41,13 +40,12 @@
     
     //without selector
     [converter convertToPeseta];
-    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning 
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

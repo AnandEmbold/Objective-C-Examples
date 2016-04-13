@@ -15,7 +15,8 @@
 
 @implementation TableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad 
+{
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -25,7 +26,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -48,8 +50,7 @@
 {
     static NSString *CellIdentifier = @"MyCell";
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    
+
     switch (indexPath.row) {
         case 0:
             cell.imgLogo.image = [UIImage imageNamed:@"cake1.jpg"];
@@ -70,9 +71,7 @@
         default:
             break;
     }
-    
     // Configure the cell...
-    
     return cell;
 }
 

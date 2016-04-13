@@ -12,16 +12,9 @@
 
 @property (nonatomic) float money;
 
-
-//- (float)convertToEuro;
+- (instancetype)initWithMoney:(float)myMoney;
 - (long)convertToPeseta;
-
 + (float)convertFromEuroToPeseta:(int)pesetas;
 + (int)convertFromPesetaToEuro:(float)euros;
-
-- (instancetype)initWithMoney:(float)myMoney;
-//+ convertFromCurrency:(CURRENCY)originCurrency toCurrency:(CURRENCY)destinationCurrency;
-
-
 
 @end

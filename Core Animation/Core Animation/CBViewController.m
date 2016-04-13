@@ -8,16 +8,16 @@
 
 #import "CBViewController.h"
 
-@interface CBViewController (){
-
+@interface CBViewController ()
+{
     BOOL isAnimated;
-    
 }
 
 @property (weak, nonatomic) IBOutlet UIView *container;
 @property (strong, nonatomic) IBOutlet UIImageView *imgView1;
 @property (strong, nonatomic) IBOutlet UIImageView *imgView2;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *load;
+
 - (IBAction)animate:(id)sender;
 
 @end
@@ -30,21 +30,19 @@
     
     [self.container addSubview:self.imgView1];
     [self.container addSubview:self.imgView2];
-    
     isAnimated = NO;
-    
     self.imgView2.hidden =  YES;
-    
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 
--(void)animationDidStart:(CAAnimation *)anim{
+- (void)animationDidStart:(CAAnimation *)anim
+{
     isAnimated = YES;
     [self.load startAnimating];
 }
 
--(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
     isAnimated = NO;
     [self.load stopAnimating];
 }
@@ -53,11 +51,10 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)animate:(id)sender {
-    
+- (IBAction)animate:(id)sender 
+{
     if (!isAnimated) {
         CATransition * animation = [CATransition animation];
         animation.duration = 1.0;
@@ -88,11 +85,7 @@
         
         self.imgView1 = self.imgView2;
         self.imgView2 = tmp;
-        
     }
 }
-
-
-
 
 @end

@@ -10,8 +10,8 @@
 
 @implementation CBCustomSegueOpen
 
--(void)perform {
-    
+- (void)perform 
+{
     UIViewController * source = self.sourceViewController;
     UIViewController * destination = self.destinationViewController;
     
@@ -27,16 +27,14 @@
     destination.view.transform = CGAffineTransformMakeScale(1, 1);
     
     [UIView commitAnimations];
-    
 }
 
--(void)finishAnimation:(NSString *) name{
-    
+- (void)finishAnimation:(NSString *) name
+{
     UIViewController * source = self.sourceViewController;
     UIViewController * destination = self.destinationViewController;
     
     [source.view.window setRootViewController:destination];
-    
 }
 
 @end

@@ -10,8 +10,8 @@
 
 @implementation CBCustomSegueClose
 
--(void)perform {
-    
+- (void)perform 
+{
     UIViewController * source = self.sourceViewController;
     UIViewController * destination = self.destinationViewController;
     
@@ -31,11 +31,10 @@
     //source.view.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(0.8, 0.8), M_PI_2*0.3); //rotate and disappear to top
     
     [UIView commitAnimations];
-    
 }
 
--(void)finishAnimation:(NSString *) name{
-    
+- (void)finishAnimation:(NSString *) name
+{
     UIViewController * source = self.sourceViewController;
     
     [UIView beginAnimations:@"close2" context:nil];
@@ -48,16 +47,14 @@
     source.view.transform = CGAffineTransformMakeScale(0.8, 0);
     
     [UIView commitAnimations];
-    
 }
 
--(void)finishAnimation2:(NSString *) name{
-    
+- (void)finishAnimation2:(NSString *) name
+{
     UIViewController * source = self.sourceViewController;
     UIViewController * destination = self.destinationViewController;
     
     [source.view.window setRootViewController:destination];
-    
 }
 
 @end

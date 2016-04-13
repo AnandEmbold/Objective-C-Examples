@@ -8,65 +8,45 @@
 
 #import "EuroConverter.h"
 
-
 @implementation EuroConverter
 
 //value to convert european euro to spanish peseta
 #define ConvertNumber 166.386
 
-
-
-
-- (instancetype)initWithMoney:(float)myMoney{
-    
+- (instancetype)initWithMoney:(float)myMoney
+{
     self = [super init];
-    
     if (self) {
-        
         self.money = myMoney;
-
-
-        
     }
     
     return self;
-    
 }
 
-
-
-
-- (float)convertToEuro{
-    
+- (float)convertToEuro
+{
     float toEuro;
-    
     toEuro = self.money * ConvertNumber;
-    
     return toEuro;
-    
 }
 
 
-- (long)convertToPeseta{
-    
+- (long)convertToPeseta
+{
     long toPesetas;
-    
     toPesetas = self.money / ConvertNumber;
-    
     return toPesetas;
 }
 
-+ (float)convertFromEuroToPeseta:(int)pesetas{
-    
++ (float)convertFromEuroToPeseta:(int)pesetas
+{
     pesetas = pesetas * ConvertNumber;
-    
     return pesetas;
 }
 
-+ (int)convertFromPesetaToEuro:(float)euros{
-    
++ (int)convertFromPesetaToEuro:(float)euros
+{
     euros = euros / ConvertNumber;
-   
     return euros;
 }
 

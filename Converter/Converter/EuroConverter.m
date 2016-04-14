@@ -30,7 +30,6 @@
     return toEuro;
 }
 
-
 - (long)convertToPeseta
 {
     long toPesetas;

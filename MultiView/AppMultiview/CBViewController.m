@@ -12,37 +12,35 @@
 @interface CBViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *btn1;
 @property (weak, nonatomic) IBOutlet UIButton *btn2;
-
 @property (strong, nonatomic) NSMutableArray * model;
+
 @end
 
 @implementation CBViewController
 
 - (void)viewDidLoad
 {
-
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
     self.model = [NSMutableArray new];
     [self.model addObject:@"Button1 touched"];
     [self.model addObject:@"Button2 touched"];
-    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    CBDetailViewController * c = segue.destinationViewController;
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    CBDetailViewController *detailViewController = segue.destinationViewController;
     
     if (sender==self.btn1) {
-        c.text = [self.model objectAtIndex:0];
+        detailViewController.text = [self.model objectAtIndex:0];
     }
     else {
-        c.text = [self.model objectAtIndex:1];
+        detailViewController.text = [self.model objectAtIndex:1];
     }
 }
 

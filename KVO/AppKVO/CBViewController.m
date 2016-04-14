@@ -29,29 +29,25 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
     [textField resignFirstResponder];
     return YES;
-    
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-
     self.lblText.text = [change valueForKey:@"new"];
-    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)updateText:(id)sender {
-    
+- (IBAction)updateText:(id)sender 
+{
     self.text = self.txtText.text;
-    
 }
+
 @end

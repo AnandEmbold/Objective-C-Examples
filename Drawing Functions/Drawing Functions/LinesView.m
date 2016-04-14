@@ -16,9 +16,9 @@
     if (self) {
         // Initialization code
     }
+    
     return self;
 }
-
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -39,9 +39,6 @@
     CGContextMoveToPoint(context, 20, 20);
     CGContextAddLineToPoint(context, 20, rect.size.height-70);
     CGContextStrokePath(context);
-    
-    
-    
 }
 
 @end

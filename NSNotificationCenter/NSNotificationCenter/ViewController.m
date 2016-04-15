@@ -10,6 +10,7 @@
 #import "Observer.h"
 
 @interface ViewController ()
+
 @property (strong) Observer * observer1;
 @property (strong) Observer * observer2;
 
@@ -45,21 +46,17 @@
                selector:@selector(reciveNotification:)
                    name:@"UIApplicationDidWillTerminateNotification"
                  object:nil];
-    
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 
-- (void) reciveNotification:(NSNotification *) notification {
-    
+- (void) reciveNotification:(NSNotification *) notification 
+{
     NSLog(@"Notification received: %@", notification.name);
-    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Flipside View

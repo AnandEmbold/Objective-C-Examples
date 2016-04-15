@@ -10,9 +10,8 @@
 
 @implementation Observer
 
-- (id) initWithName: (NSString *) name
-         notification: (NSString *) notification{
-    
+- (id) initWithName: (NSString *) name notification: (NSString *) notification
+{
     if (self = [super init]) {
         self.name = name;
         NSNotificationCenter * center = [NSNotificationCenter defaultCenter];
@@ -20,14 +19,13 @@
                    selector:@selector(reciveNotification:)
                        name:notification
                      object:nil];
-        
     }
     
     return self;
-    
 }
 
-- (void) reciveNotification: (NSNotification *) notification{
+- (void) reciveNotification: (NSNotification *) notification
+{
     NSLog(@"Object %@ has received the notification %@", self.name, notification.name);
 }
 

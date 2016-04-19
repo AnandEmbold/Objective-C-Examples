@@ -13,9 +13,6 @@
 @property (nonatomic, strong) NSString *photoName;
 @property (nonatomic, strong) NSString *photoTitle;
 
-
-- (instancetype)initWithPhotoName:(NSString *)myPhotoName
-                       photoTitle:(NSString *)myPhotoTitle;
-
+- (instancetype)initWithPhotoName:(NSString *)myPhotoName photoTitle:(NSString *)myPhotoTitle;
 
 @end

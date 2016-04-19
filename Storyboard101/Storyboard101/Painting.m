@@ -10,22 +10,15 @@
 
 @implementation Painting
 
-
-- (instancetype)initWithPhotoName:(NSString *)myPhotoName
-                       photoTitle:(NSString *)myPhotoTitle { 
-    
+- (instancetype)initWithPhotoName:(NSString *)myPhotoName photoTitle:(NSString *)myPhotoTitle 
+{ 
     self = [super init];
-    
     if (self) {
-        
         _photoName = myPhotoName;
         _photoTitle = myPhotoTitle;
-        
     }
     
     return self;
-    
 }
-
 
 @end

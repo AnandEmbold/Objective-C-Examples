@@ -16,7 +16,8 @@
 
 @implementation NewViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad 
+{
     [super viewDidLoad];
     
     self.lblMain = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 200, 44)];
@@ -24,7 +25,8 @@
     self.lblMain.textColor = [UIColor greenColor];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning 
+{
     [super didReceiveMemoryWarning];
 }
 

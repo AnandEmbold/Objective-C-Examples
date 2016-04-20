@@ -10,20 +10,15 @@
 
 @implementation CBContact
 
-- (id) initWithName: (NSString *) name
-              email: (NSString *) email
-              phone: (NSString *) phone {
+- (id)initWithName:(NSString *)name email:(NSString *)email phone:(NSString *)phone {
     
     if (self = [super init]) {
-        
         _name = name;
         _email = email;
         _phone = phone;
-        
     }
     
     return self;
-    
 }
 
 @end

@@ -11,12 +11,11 @@
 
 @protocol CBAddViewControllerDelegate
 
-- (void) save: (CBContact *) contact;
+- (void)save:(CBContact *)contact;
 
 @end
 
 @interface CBAddViewController : UIViewController <UITextFieldDelegate>
-
 
 @property (strong) id <CBAddViewControllerDelegate> delegate;
 

@@ -14,8 +14,6 @@
 @property (strong, nonatomic) NSString * phone;
 @property (strong, nonatomic) NSString * email;
 
-- (id) initWithName: (NSString *) name
-              email: (NSString *) email
-              phone: (NSString *) phone;
+- (id) initWithName: (NSString *) name email: (NSString *) email phone: (NSString *) phone;
 
 @end

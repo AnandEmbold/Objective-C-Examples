@@ -11,6 +11,7 @@
 #import "CBDetailViewController.h"
 
 @interface CBTableViewController ()
+
 - (IBAction)addContact:(id)sender;
 
 @property (strong, nonatomic) NSMutableArray * model;
@@ -25,6 +26,7 @@
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
@@ -55,7 +57,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -134,8 +135,8 @@
 
  */
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     UIStoryboard * stb = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
     CBDetailViewController * c = [stb instantiateViewControllerWithIdentifier:@"detail"];
     c.contact = [self.model objectAtIndex:indexPath.row];
@@ -143,17 +144,18 @@
     
 }
 
-- (IBAction)addContact:(id)sender {
+- (IBAction)addContact:(id)sender
+{
     UIStoryboard * stb = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
     CBAddViewController * c = [stb instantiateViewControllerWithIdentifier:@"add"];
     c.delegate = self;
     [self presentViewController:c animated:YES completion:nil];
 }
 
-- (void) save:(CBContact *)contact{
+- (void) save:(CBContact *)contact
+{
     [self.model addObject:contact];
     [self.tableView reloadData];
 }
-
 
 @end

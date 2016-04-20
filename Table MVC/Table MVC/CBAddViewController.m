@@ -9,6 +9,7 @@
 #import "CBAddViewController.h"
 
 @interface CBAddViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UITextField *txtEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtPhone;
@@ -26,39 +27,38 @@
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)save:(id)sender {
+- (IBAction)save:(id)sender 
+{
     CBContact * c = [[CBContact alloc] initWithName:self.txtName.text
                                               email:self.txtEmail.text
                                               phone:self.txtPhone.text];
-    
     [self.delegate save:c];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)cancel:(id)sender {
+- (IBAction)cancel:(id)sender 
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
     [textField resignFirstResponder];
-    
     return YES;
-    
 }
 
 @end

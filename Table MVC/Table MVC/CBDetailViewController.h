@@ -13,5 +13,4 @@
 
 @property (weak, nonatomic) CBContact * contact;
 
-
 @end

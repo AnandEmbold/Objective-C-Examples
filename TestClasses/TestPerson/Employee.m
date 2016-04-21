@@ -10,30 +10,23 @@
 
 @implementation Employee
 
-
-- (instancetype)initWithName:(NSString *)myName
-                     surname:(NSString *)mySurname
-                          ID:(NSString *)myID
-                  employeeID:(NSString *)myEmployeeID{
+- (instancetype)initWithName:(NSString *)myName surname:(NSString *)mySurname ID:(NSString *)myID employeeID:(NSString *)myEmployeeID{
     
     self = [super initWithName:myName surname:mySurname ID:myID];
-    
     if (self){
-        
         self.employeeID = myEmployeeID;
-        
     }
     
     return self;
-    
-    
 }
 
-- (void) work{
+- (void)work
+{
     NSLog(@"I'm working");
 }
 
-- (NSString * )description {
+- (NSString * )description 
+{
     return [NSString stringWithFormat:@"Name: %@ %@, ID: %@", self.name, self.surname, self.ID ];
 }
 

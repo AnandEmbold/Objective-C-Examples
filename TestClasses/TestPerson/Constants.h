@@ -7,11 +7,10 @@
 //
 
 #ifndef TestPerson_Constants_h
-#define TestPerson_Constants_h
 
+#define TestPerson_Constants_h
 #define kKeyForName @"name"
 #define kKeyForSurname @"surname"
 #define kKeyForID @"ID"
-
 
 #endif

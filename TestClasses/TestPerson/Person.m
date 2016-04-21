@@ -8,38 +8,25 @@
 
 #import "Person.h"
 
-
 @interface Person()
 
 @property (nonatomic, strong) UIImage *privateImage;
 
 @end
 
-
 @implementation Person
 
 @synthesize name;
 @synthesize delegate;
 
-
-
-
-- (instancetype)initWithName:(NSString *)myName {
-    
-
-    
+- (instancetype)initWithName:(NSString *)myName 
+{
     self = [self initWithName:myName surname:@"essribe tu apellido" ID:@""];
-    
     return self;
-    
 }
 
-
-
-- (instancetype)initWithName:(NSString *)myName
-                     surname:(NSString *)mySurname
-                          ID:(NSString *)myID {
-
+- (instancetype)initWithName:(NSString *)myName surname:(NSString *)mySurname ID:(NSString *)myID 
+{
     self = [super init];
     
     if (self) {
@@ -49,43 +36,28 @@
     }
     
     return self;
-
 }
 
-
-
-
-- (void)printDescription{
+- (void)printDescriptio
+n{
     NSLog(@"My name is %@", name);
 }
 
-
-- (void) setName:(NSString *)myName{
-    
+- (void) setName:(NSString *)myName
+{
     name= myName;
-    
-    
     [delegate didChangeName:myName];
-    
 }
-
 
 #pragma mark - UIImage stuff
 
-- (UIImage *)image{
-    
-    if (self.privateImage == nil){
-        
+- (UIImage *)image
+{
+    if (self.privateImage == nil) {
         self.privateImage = [UIImage imageNamed:@"default"];
     }
-    
-    
-    
+
     return self.privateImage;
 }
-
-//- (NSString *)description{
-//    return [NSString stringWithFormat:@"Person with name: ]
-//}
 
 @end

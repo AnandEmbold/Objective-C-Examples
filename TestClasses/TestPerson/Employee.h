@@ -12,13 +12,8 @@
 
 @property (nonatomic, strong) NSString *employeeID;
 
-- (instancetype)initWithName:(NSString *)myName
-                     surname:(NSString *)mySurname
-                          ID:(NSString *)myID
-                  employeeID:(NSString *)myEmployeeID;
+- (instancetype)initWithName:(NSString *)myName surname:(NSString *)mySurname ID:(NSString *)myID employeeID:(NSString *)myEmployeeID;
 
 - (void)work;
-
-
 
 @end

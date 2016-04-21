@@ -12,11 +12,9 @@
 @protocol ChangeNameDelegate <NSObject>
 
 @optional
+
 - (void)didChangeName:(NSString *)newName;
 
-
-
 @end
-
 
 #endif

@@ -22,10 +22,6 @@
 - (void)printDescription;
 
 - (instancetype)initWithName:(NSString *)myName;
-
-- (instancetype)initWithName:(NSString *)myName
-                     surname:(NSString *)mySurname
-                          ID:(NSString *)myID;
-
+- (instancetype)initWithName:(NSString *)myName surname:(NSString *)mySurname ID:(NSString *)myID;
 
 @end

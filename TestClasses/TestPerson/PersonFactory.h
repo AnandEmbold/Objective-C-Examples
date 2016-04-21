@@ -12,15 +12,9 @@
 
 @interface PersonFactory : NSObject
 
-
 + (Person *)createsPersonWithName:(NSString *)name surname:(NSString *)surname idNumber:(NSString *)idNumber;
-
 + (Employee *)createsEmployeeWithName:(NSString *)name surname:(NSString *)surname idNumber:(NSString *)idNumber employeeId:(NSString *)employeeId;
-
 + (NSString *)interestingIdForPersonOrEmployee: (id)personOrEmployee;
-
 + (NSArray *)arrayWithOnlyPersonsFromArray:(NSArray *)originalArray;
-
-
 
 @end

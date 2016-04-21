@@ -9,11 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ChangeNameDelegate.h"
 
-
 @interface ViewController : UIViewController<ChangeNameDelegate>
 
--(void) didChangeName:(NSString *)newName;
-
+- (void)didChangeName:(NSString *)newName;
 
 @end
-

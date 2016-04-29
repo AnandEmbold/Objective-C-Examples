@@ -15,9 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *dateOfBirthYorkieLabel;
 @property (weak, nonatomic) IBOutlet UITextField *genderYorkieLabel;
 @property (weak, nonatomic) IBOutlet UITextField *weightYorkieLabel;
-
-//property picker (male/female)
-@property (nonatomic, strong) UIPickerView *myPickerView;
+@property (nonatomic, strong) UIPickerView *myPickerView; //property picker (male/female)
 @property (nonatomic, strong) NSArray *pickerArray;
 @property CGPoint originalCenter;
 @property CGFloat currentKeyboardHeight;
@@ -28,10 +26,10 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad 
+{
     [super viewDidLoad];
-    
-    
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification
@@ -41,8 +39,7 @@
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
-    
-    
+
     //original position of view
     self.originalCenter = self.view.center;
     
@@ -56,24 +53,18 @@
     [datePicker addTarget:self action:@selector(updateTextField:) forControlEvents:UIControlEventValueChanged];
     [self.dateOfBirthYorkieLabel setInputView:datePicker];
     
-    
-    
     //hide keyboard on enter
     self.nameYorkieLabel.delegate = self;
     self.dateOfBirthYorkieLabel.delegate = self;
     self.genderYorkieLabel.delegate = self;
     self.weightYorkieLabel.delegate = self;
-    
-    
 }
 
 //***** KEYBOARD CONTROL **********//
 //control keyboard appears to move view position
-
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     //get the frame origin y of the active textField
-    
     self.currentTextFieldOriginY = textField.frame.origin.y;
     self.currentTextFieldHeight = textField.frame.size.height;
     /* keyboard is visible, move views */
@@ -85,10 +76,8 @@
     /* resign first responder, hide keyboard, move views */
 }
 
-
-- (void)keyboardWillShow:(NSNotification*)notification {
-    
-    
+- (void)keyboardWillShow:(NSNotification*)notification 
+{
     NSDictionary *info = [notification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     CGFloat deltaHeight = kbSize.height - self.currentKeyboardHeight;
@@ -105,16 +94,13 @@
     if ((self.currentTextFieldOriginY+self.currentTextFieldHeight+25) > (self.view.frame.size.height-deltaHeight)) {
         self.view.center = CGPointMake(self.originalCenter.x, self.originalCenter.y + ((self.view.frame.size.height-deltaHeight)-(self.currentTextFieldOriginY+self.currentTextFieldHeight+25)) );
     }
-    
-    
 }
 
-- (void)keyboardWillHide:(NSNotification*)notification {
+- (void)keyboardWillHide:(NSNotification*)notification 
+{
     self.view.center = self.originalCenter;
     self.currentKeyboardHeight = 0.0f;
 }
-
-
 
 //datepicker bornDate
 - (void)updateTextField:(UIDatePicker *)sender
@@ -129,8 +115,8 @@
     self.dateOfBirthYorkieLabel.text = [NSString stringWithFormat:@"%@",dateString];
 }
 
-
-- (void)addPickerView{
+- (void)addPickerView
+{
     self.pickerArray = [[NSArray alloc]initWithObjects:@"Male",@"Female", nil];
     self.myPickerView = [[UIPickerView alloc]init];
     self.myPickerView.backgroundColor = [UIColor colorWithRed:123.0/255.0 green:178.0/255.0 blue:185.0/255.0 alpha:1];
@@ -146,7 +132,6 @@
     [toolBar setItems:toolbarItems];
     self.genderYorkieLabel.inputView = self.myPickerView;
     self.genderYorkieLabel.inputAccessoryView = toolBar;
-    
 }
 
 - (void)doneClicked:(id)sender
@@ -155,61 +140,51 @@
     //*************and need to hide keyboard too**************
 }
 
-
-
 #pragma mark - Picker View Data source
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
     return 1;
 }
 
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
     return [self.pickerArray count];
 }
 
-
-
 #pragma mark- Picker View Delegate
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
     [self.genderYorkieLabel setText:[self.pickerArray objectAtIndex:row]];
 }
 
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
     return [self.pickerArray objectAtIndex:row];
 }
 
-
-
-
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning 
+{
     [super didReceiveMemoryWarning];
 }
 
-
-
-
-
 //get the name of the image in NSString format to save on SQLite
-
-- (NSString *) getFileName:(UIImageView *)imgView{
-    
+- (NSString *) getFileName:(UIImageView *)imgView
+{
     NSString *imgName = [imgView image].accessibilityIdentifier;
-    
     NSLog(@"%@",imgName);
-    
     return imgName;
-    
 }
-
 
 //hide keyboard on return
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
-    
     return YES;
 }
+
 //hide keyboard on touch outside textField
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {

@@ -10,15 +10,10 @@
 
 @interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 
-
 typedef enum {
-   
     LanguageCountryPickerColumnCountries = 0,
     LanguageCountryPickerColumnLanguages = 1,
     LanguageCountryPickerColumnCities = 2
-    
 } LanguageCountryPickerColumn;
 
-
 @end
-

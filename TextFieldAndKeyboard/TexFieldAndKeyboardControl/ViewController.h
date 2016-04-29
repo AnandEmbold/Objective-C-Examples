@@ -10,6 +10,4 @@
 
 @interface ViewController : UIViewController<UITextFieldDelegate, UIPickerViewDataSource,UIPickerViewDelegate>
 
-
 @end
-

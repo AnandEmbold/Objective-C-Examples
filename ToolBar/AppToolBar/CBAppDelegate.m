@@ -9,10 +9,13 @@
 #import "CBAppDelegate.h"
 
 @interface UINavigationController (MyCustomNavController)
+
 @end
 
 @implementation UINavigationController (MyCustomNavController)
-- (void)viewWillAppear:(BOOL)animated {
+
+- (void)viewWillAppear:(BOOL)animated 
+{
     CGColorRef darkColor = [[UIColor blackColor] colorWithAlphaComponent:.5f].CGColor;
     CGColorRef lightColor = [UIColor clearColor].CGColor;
     CGFloat navigationBarBottom = self.navigationBar.frame.origin.y + self.navigationBar.frame.size.height;
@@ -23,6 +26,7 @@
     [self.view.layer addSublayer:newShadow];
     [super viewWillAppear:animated];
 }
+
 @end
 
 

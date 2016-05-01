@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CBCellPhoto : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView * imgUser;
-@property (weak, nonatomic) IBOutlet UILabel * lblUser;
-@property (weak, nonatomic) IBOutlet UIImageView * imgPhoto;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgUser;
+@property (weak, nonatomic) IBOutlet UILabel *lblUser;
+@property (weak, nonatomic) IBOutlet UIImageView *imgPhoto;
 
 @end

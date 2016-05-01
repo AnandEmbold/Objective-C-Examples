@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CollectionCell : UITableViewCell <UICollectionViewDelegate, UICollectionViewDataSource>
-@property (weak, nonatomic) IBOutlet UICollectionView * clcCollection;
 
-@property (strong, nonatomic) NSMutableArray * collection;
+@property (weak, nonatomic) IBOutlet UICollectionView *clcCollection;
+@property (strong, nonatomic) NSMutableArray *collection;
 
 @end

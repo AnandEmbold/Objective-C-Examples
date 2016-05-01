@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CBCellText : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UIImageView *imgUser;
-@property (weak, nonatomic) IBOutlet UILabel * lblUser;
-@property (weak, nonatomic) IBOutlet UITextView * lblComment;
+@property (weak, nonatomic) IBOutlet UILabel *lblUser;
+@property (weak, nonatomic) IBOutlet UITextView *lblComment;
 
 @end

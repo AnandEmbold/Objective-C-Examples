@@ -19,13 +19,11 @@
     return self;
 }
 
-- (void)reloadInputViews{
-    
+- (void)reloadInputViews
+{
     self.lblInfo.text = self.text;
     NSLog(@"%@", self.text);
-    
 }
-
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -35,6 +33,4 @@
     // Drawing code
 }
 
-
 @end
-

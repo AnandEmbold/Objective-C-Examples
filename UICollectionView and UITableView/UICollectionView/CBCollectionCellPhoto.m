@@ -19,13 +19,10 @@
     return self;
 }
 
--(void)reloadInputViews{
-    
+- (void)reloadInputViews
+{
     self.imgPhoto.image = [UIImage imageNamed:self.imgFile];
-    
-    
 }
-
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -34,6 +31,5 @@
     // Drawing code
     [self reloadInputViews];
 }
-
 
 @end

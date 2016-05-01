@@ -10,9 +10,8 @@
 
 @interface CBMarcoViewController : UIViewController
 
-@property NSString * photo;
-@property (weak, nonatomic) IBOutlet UIImageView * imgPhoto;
-
-@property NSString * imageFile;
+@property NSString *photo;
+@property (weak, nonatomic) IBOutlet UIImageView *imgPhoto;
+@property NSString *imageFile;
 
 @end

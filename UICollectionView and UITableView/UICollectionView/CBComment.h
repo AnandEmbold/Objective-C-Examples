@@ -12,18 +12,15 @@ typedef enum {
     CBTipoCommentPhoto,
     CBTipoCommentText,
     CBTipoCommentAlbum
-}CBTipoComment;
-
+} CBTipoComment;
 
 @interface CBComment : NSObject
 
-
-@property NSString * contact;
-@property NSString * name;
+@property NSString *contact;
+@property NSString *name;
 @property CBTipoComment type;
-@property NSString * text;
-@property NSString * photo;
-@property NSArray * album;
-
+@property NSString *text;
+@property NSString *photo;
+@property NSArray *album;
 
 @end

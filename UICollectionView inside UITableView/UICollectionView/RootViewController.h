@@ -10,7 +10,6 @@
 
 @interface RootViewController : UITableViewController
 
-@property (strong, nonatomic) NSMutableArray * model;
-
+@property (strong, nonatomic) NSMutableArray *model;
 
 @end

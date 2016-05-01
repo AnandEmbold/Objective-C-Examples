@@ -17,108 +17,114 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)executeAnimation{
-    
+- (void)executeAnimation
+{
     [UIView beginAnimations:@"animation" context:nil];
     [UIView setAnimationDuration:0.2];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    
 }
 
-- (void)launchAnimation{
-    
+- (void)launchAnimation
+{
     [UIView commitAnimations];
-    
 }
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)center:(id)sender {
+- (IBAction)center:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformIdentity;
     [self launchAnimation];
 }
 
-- (IBAction)turnLeft:(id)sender {
+- (IBAction)turnLeft:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformRotate(self.view.transform, -M_PI_2*0.1);
     [self launchAnimation];
 }
 
-- (IBAction)turnRight:(id)sender {
+- (IBAction)turnRight:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformRotate(self.view.transform, M_PI_2*0.1);
     [self launchAnimation];
 }
 
-- (IBAction)up:(id)sender {
+- (IBAction)up:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformTranslate(self.view.transform, 0, -10);
     [self launchAnimation];
 }
 
-- (IBAction)down:(id)sender {
+- (IBAction)down:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformTranslate(self.view.transform, 0, 10);
     [self launchAnimation];
 }
 
-- (IBAction)right:(id)sender {
+- (IBAction)right:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformTranslate(self.view.transform, 10, 0);
     [self launchAnimation];
 }
 
-- (IBAction)left:(id)sender {
+- (IBAction)left:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformTranslate(self.view.transform, -10, 0);
     [self launchAnimation];
 }
 
-- (IBAction)zoomOut:(id)sender {
+- (IBAction)zoomOut:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformScale(self.view.transform, 0.9, 0.9);
     [self launchAnimation];
 }
 
-- (IBAction)zoomIn:(id)sender {
+- (IBAction)zoomIn:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformScale(self.view.transform, 1.1, 1.1);
     [self launchAnimation];
 }
 
-- (IBAction)compressH:(id)sender {
+- (IBAction)compressH:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformScale(self.view.transform, 1, 0.9);
     [self launchAnimation];
 }
 
-- (IBAction)expandH:(id)sender {
+- (IBAction)expandH:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformScale(self.view.transform, 1, 1.1);
     [self launchAnimation];
 }
 
-- (IBAction)compressV:(id)sender {
+- (IBAction)compressV:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformScale(self.view.transform, 0.9, 1);
     [self launchAnimation];
 }
 
-- (IBAction)expandV:(id)sender {
+- (IBAction)expandV:(id)sender 
+{
     [self executeAnimation];
     self.view.transform = CGAffineTransformScale(self.view.transform, 1.1, 1);
     [self launchAnimation];
 }
-
 
 @end

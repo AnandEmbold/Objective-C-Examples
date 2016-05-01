@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CBCollectionCellPhoto : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *imgPhoto;
 
-@property NSString * imgFile;
+@property (weak, nonatomic) IBOutlet UIImageView *imgPhoto;
+@property NSString *imgFile;
 
 @end

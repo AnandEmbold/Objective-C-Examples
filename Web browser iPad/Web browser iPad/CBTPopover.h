@@ -10,18 +10,14 @@
 
 @protocol CBPooverDelegate
 
--(void) selectedURL:(NSString *) url PopoverController:(UIPopoverController *) popover;
+- (void)selectedURL:(NSString *)url PopoverController:(UIPopoverController *)popover;
 
 @end
-
 
 @interface CBTPopover : UITableViewController
 
 @property (strong) id<CBPooverDelegate> delegate;
-
-@property (weak) NSMutableArray * history;
-@property (weak) UIPopoverController * popover;
-
-
+@property (weak) NSMutableArray *history;
+@property (weak) UIPopoverController *popover;
 
 @end

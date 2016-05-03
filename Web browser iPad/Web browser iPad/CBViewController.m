@@ -16,9 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIWebView *wbvBrowser;
 @property (weak, nonatomic) IBOutlet UITextField *txtUrl;
 
-@property (strong, nonatomic) NSMutableArray * history;
+@property (strong, nonatomic) NSMutableArray *history;
 
--(void)loadURL;
+- (void)loadURL;
 
 @end
 
@@ -34,27 +34,25 @@
     [self loadURL];
     
     self.history = [NSMutableArray new];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
--(void)loadURL{
-    
+- (void)loadURL
+{
     [self.wbvBrowser loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.txtUrl.text]]];
-    
 }
 
--(void)webViewDidStartLoad:(UIWebView *)webView{
-    
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
     [self.aivLoading startAnimating];
 }
 
--(void)webViewDidFinishLoad:(UIWebView *)webView{
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
     NSString * titulo = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     NSString * URL = [webView.request.URL absoluteString];
     
@@ -69,15 +67,15 @@
     [self.aivLoading stopAnimating];
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
     [self loadURL];
     [textField resignFirstResponder];
     return YES;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-   
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     if ([segue.identifier isEqualToString:@"popover"]) {
         CBTPopover * table = [segue destinationViewController];
         //table.delegate = self;
@@ -89,47 +87,13 @@
         CBModalViewController * modal = [segue destinationViewController];
         modal.code = [self.wbvBrowser stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];
     }
-    
 }
 
--(void)selectedURL:(NSString *)url PopoverController:(UIPopoverController *)popover{
-    
+- (void)selectedURL:(NSString *)url PopoverController:(UIPopoverController *)popover
+{
     self.txtUrl.text = url;
     [self loadURL];
     [popover dismissPopoverAnimated:YES];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @end

@@ -10,9 +10,9 @@
 
 @interface CBBookmarks : NSObject
 
-@property (strong) NSString * title;
-@property (strong) NSString * url;
+@property (strong) NSString *title;
+@property (strong) NSString *url;
 
--(id)initWithTitle:(NSString *) title URL:(NSString *) url;
+- (id)initWithTitle:(NSString *)title URL:(NSString *)url;
 
 @end

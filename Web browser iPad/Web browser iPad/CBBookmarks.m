@@ -10,16 +10,14 @@
 
 @implementation CBBookmarks
 
--(id)initWithTitle:(NSString *)title URL:(NSString *)url{
-    
-    
+- (id)initWithTitle:(NSString *)title URL:(NSString *)url
+{
     if (self=[super init]) {
         self.title = title;
         self.url = url;
     }
     
     return self;
-    
 }
 
 @end

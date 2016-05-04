@@ -7,7 +7,6 @@
 //
 
 #import "CBAppDelegate.h"
-
 #import "CBMasterViewController.h"
 
 @implementation CBAppDelegate

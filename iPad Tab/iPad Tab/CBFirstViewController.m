@@ -9,6 +9,7 @@
 #import "CBFirstViewController.h"
 
 @interface CBFirstViewController ()
+
 @property (weak, nonatomic) IBOutlet UIScrollView *sclContents;
 
 @end
@@ -20,13 +21,11 @@
     [super viewDidLoad];
     self.sclContents.scrollEnabled = YES;
     self.sclContents.contentSize = CGSizeMake(768, 1400);
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

@@ -24,24 +24,41 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex 
-{
-    if(buttonIndex == 0) {
-        NSLog(@"Take Photo Button Clicked");
-    }
-    else if(buttonIndex == 1) {
-        NSLog(@"Select Photo Button Clicked");
-    }
-}
-
 - (IBAction)showActionsheet:(id)sender
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select the operation to proceed?"
-                                                             delegate:self
-                                                    cancelButtonTitle:@"Cancel"
-                                               destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Take Photo", @"Select Photo", nil];
-    [actionSheet showInView:self.view];
+    UIAlertController *view = [UIAlertController alertControllerWithTitle:@"Action Sheet"
+                                                                  message:@"Select the operation to proceed?"
+                                                           preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *takePhoto = [UIAlertAction actionWithTitle:@"Take Photo"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction * action) {
+                                                          //Do some thing here
+                                                          NSLog(@"Take Photo Button Clicked");
+                                                          [view dismissViewControllerAnimated:YES completion:nil];
+                             
+                                                      }];
+    UIAlertAction *selectPhoto = [UIAlertAction actionWithTitle:@"Select Photo"
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction * action) {
+                                                            //Do some thing here
+                                                            NSLog(@"Select Photo Button Clicked");
+                                                            [view dismissViewControllerAnimated:YES completion:nil];
+                             
+                                                        }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel"
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                       NSLog(@"Cancel");
+                                                       [view dismissViewControllerAnimated:YES completion:nil];
+                                 
+                                                   }];
+    
+    [view addAction:takePhoto];
+    [view addAction:selectPhoto];
+    [view addAction:cancel];
+    [self presentViewController:view animated:YES completion:nil];
+    
 }
 
 @end

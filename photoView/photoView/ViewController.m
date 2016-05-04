@@ -10,34 +10,35 @@
 #import "Painting.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageViewStoryboard;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *geniusLabel;
 @property (strong, nonatomic) NSArray *theFinalArrayToStoryboard;
 @property (weak, nonatomic) IBOutlet UIButton *previousButtonProperty;
 @property (weak, nonatomic) IBOutlet UIButton *nextButtonProperty;
-
 @property NSInteger index;
 
 @end
 
 @implementation ViewController
 
-
-- (IBAction)nextPhotoButton:(UIButton *)sender {
+- (IBAction)nextPhotoButton:(UIButton *)sender 
+{
     [self validateIndexOfArray:++self.index];
     [self printThePhoto:self.index];
 }
 
 
-- (IBAction)previousPhotoButton:(UIButton *)sender {
+- (IBAction)previousPhotoButton:(UIButton *)sender 
+{
     [self validateIndexOfArray:--self.index];
     [self printThePhoto:self.index];
 }
 
 
-- (void)viewDidLoad {
-    
+- (void)viewDidLoad 
+{
     [super viewDidLoad];
     
     [self.previousButtonProperty setEnabled:NO];
@@ -46,24 +47,17 @@
     
     [self setTheArray];
     [self printThePhoto:self.index];
-
 }
 
-
-
-
-- (void)setTheArray{
-    
+- (void)setTheArray
+{
     NSArray *theArrayOfDictionariesOfPhotos = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"photos" ofType:@"plist"]];
-    
     Painting *painting = [[Painting alloc] init];
-    
     self.theFinalArrayToStoryboard = [painting theArrayOfPhotosFromDicts:theArrayOfDictionariesOfPhotos];
-    
 }
 
-- (void)printThePhoto:(NSInteger)arrayIndex{
-    
+- (void)printThePhoto:(NSInteger)arrayIndex
+{
     UIImage *image = [UIImage imageNamed:[[self.theFinalArrayToStoryboard objectAtIndex:arrayIndex] photoName]];
     [self.photoImageViewStoryboard setImage:image];
     
@@ -74,11 +68,10 @@
     } else {
         self.geniusLabel.text = @"Genius";
     }
-    
 }
 
-- (void)validateIndexOfArray:(NSInteger)arrayIndex{
-    
+- (void)validateIndexOfArray:(NSInteger)arrayIndex
+{
     if (arrayIndex==0) {
             [self.previousButtonProperty setEnabled:NO];
             [self.previousButtonProperty setAlpha:0.4];
@@ -93,7 +86,5 @@
             [self.nextButtonProperty setAlpha:1];
     } 
 }
-
-
 
 @end

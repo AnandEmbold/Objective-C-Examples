@@ -14,12 +14,8 @@
 @property (nonatomic, strong) NSString *photoTitle;
 @property (nonatomic, strong) NSNumber *genius;
 
-
-- (instancetype)initWithPhotoName:(NSString *)myPhotoName
-                       photoTitle:(NSString *)myPhotoTitle
-                           genius:(NSNumber *)myGenius;
+- (instancetype)initWithPhotoName:(NSString *)myPhotoName photoTitle:(NSString *)myPhotoTitle genius:(NSNumber *)myGenius;
 
 - (NSArray *)theArrayOfPhotosFromDicts:(NSArray *)originalArray;
-
 
 @end

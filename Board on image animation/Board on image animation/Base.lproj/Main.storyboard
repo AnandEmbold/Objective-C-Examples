@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7QA-bx-azl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7QA-bx-azl">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -35,15 +36,15 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animation duration updated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfQ-KN-lkf">
-                                <rect key="frame" x="0.0" y="62" width="320" height="27"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation duration updated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfQ-KN-lkf">
+                                <rect key="frame" x="-4" y="62" width="328" height="17"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.25 s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fve-il-WKJ">
-                                <rect key="frame" x="286" y="541" width="34" height="15"/>
+                                <rect key="frame" x="285" y="540" width="35" height="15.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fve-il-WKJ" secondAttribute="height" multiplier="16:7" id="AUd-Xk-Wf7"/>
                                 </constraints>
@@ -54,9 +55,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="IfQ-KN-lkf" secondAttribute="trailing" constant="-20" id="0di-if-P3S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fve-il-WKJ" secondAttribute="trailing" constant="-16" id="227-5P-PJ9"/>
+                            <constraint firstItem="IfQ-KN-lkf" firstAttribute="top" secondItem="Zqj-5h-css" secondAttribute="topMargin" constant="62" id="92a-aq-oHQ"/>
                             <constraint firstItem="a2X-bI-gwc" firstAttribute="top" secondItem="Zqj-5h-css" secondAttribute="topMargin" id="CQp-Ao-J40"/>
                             <constraint firstItem="a2X-bI-gwc" firstAttribute="leading" secondItem="Zqj-5h-css" secondAttribute="leadingMargin" constant="-16" id="HND-wl-NJA"/>
+                            <constraint firstItem="IfQ-KN-lkf" firstAttribute="leading" secondItem="Zqj-5h-css" secondAttribute="leadingMargin" constant="-20" id="aHW-CJ-ya0"/>
                             <constraint firstItem="Xbz-Er-itc" firstAttribute="top" secondItem="Fve-il-WKJ" secondAttribute="bottom" constant="12" id="cAU-WR-0wV"/>
                             <constraint firstItem="Xbz-Er-itc" firstAttribute="top" secondItem="Jur-0y-WGe" secondAttribute="bottom" id="ltm-GE-01S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="a2X-bI-gwc" secondAttribute="trailing" constant="-16" id="nmx-eP-sNZ"/>
@@ -104,9 +108,4 @@
             <point key="canvasLocation" x="-158.93333333333334" y="0.0"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

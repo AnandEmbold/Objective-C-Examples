@@ -20,4 +20,4 @@ sources:
     - '.git'
 
 
-languages: 'CPP,OBJECTIVE_C'
+languages: 'OBJECTIVE_C,CPP'
